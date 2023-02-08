@@ -65,6 +65,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -78,6 +79,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\6811951_bank_currency_currency exchange_exchange_finance_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\1419135_sberbank_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\7007512_money_marketing_business_finance_bank_icon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
