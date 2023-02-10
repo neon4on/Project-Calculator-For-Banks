@@ -15,6 +15,8 @@ namespace WindowsFormsApp1
         public LoginForm()
         {
             InitializeComponent();
+            this.Password.AutoSize = false;
+            this.Password.Size = new Size(this.Password.Size.Width, this.Login.Size.Height);
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -22,14 +24,68 @@ namespace WindowsFormsApp1
 
         }
 
-        private void label2_Click(object sender, EventArgs e)
+        private void pictureBox2_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void pictureBox2_Click(object sender, EventArgs e)
+        private void label3_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void CloseButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void Login_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Password_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CloseButton_MouseEnter(object sender, EventArgs e)
+        {
+            CloseButton.ForeColor = Color.Green;
+        }
+
+        private void CloseButton_MouseLeave(object sender, EventArgs e)
+        {
+            CloseButton.ForeColor = Color.Black;
+        }
+
+        Point lastPoint;
+        private void label1_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                this.Left += e.X - lastPoint.X;
+                this.Top += e.Y - lastPoint.Y;
+            }
+        }
+
+        private void label1_MouseDown(object sender, MouseEventArgs e)
+        {
+            lastPoint = new Point(e.X, e.Y);
+        }
+
+        private void panel1_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                this.Left += e.X - lastPoint.X;
+                this.Top += e.Y - lastPoint.Y;
+            }
+        }
+
+        private void panel1_MouseDown(object sender, MouseEventArgs e)
+        {
+            lastPoint = new Point(e.X, e.Y);
         }
     }
 }
