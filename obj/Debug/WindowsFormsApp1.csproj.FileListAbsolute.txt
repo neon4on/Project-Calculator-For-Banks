@@ -9,3 +9,4 @@ C:\Users\Rush\Desktop\Project_Money\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.
 C:\Users\Rush\Desktop\Project_Money\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.pdb
 C:\Users\Rush\Desktop\Project_Money\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
 C:\Users\Rush\Desktop\Project_Money\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
+C:\Users\Rush\Desktop\Project_Money\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form1.resources
