@@ -32,12 +32,12 @@
             this.button1 = new System.Windows.Forms.Button();
             this.Password = new System.Windows.Forms.TextBox();
             this.Login = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.CloseButton = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.registerLabel = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -47,10 +47,10 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Chocolate;
+            this.panel1.Controls.Add(this.registerLabel);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.Password);
             this.panel1.Controls.Add(this.Login);
-            this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.pictureBox3);
             this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.Controls.Add(this.panel2);
@@ -71,7 +71,7 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(181, 375);
+            this.button1.Location = new System.Drawing.Point(181, 311);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(100, 41);
             this.button1.TabIndex = 7;
@@ -81,7 +81,7 @@
             // 
             // Password
             // 
-            this.Password.Location = new System.Drawing.Point(181, 307);
+            this.Password.Location = new System.Drawing.Point(543, 148);
             this.Password.Name = "Password";
             this.Password.Size = new System.Drawing.Size(100, 20);
             this.Password.TabIndex = 6;
@@ -97,22 +97,12 @@
             this.Login.TabIndex = 5;
             this.Login.TextChanged += new System.EventHandler(this.Login_TextChanged);
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(439, 207);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(25, 13);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "111";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
-            // 
             // pictureBox3
             // 
             this.pictureBox3.Image = global::WindowsFormsApp1.Properties.Resources._7007512_money_marketing_business_finance_bank_icon;
-            this.pictureBox3.Location = new System.Drawing.Point(0, 265);
+            this.pictureBox3.Location = new System.Drawing.Point(352, 103);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(154, 164);
+            this.pictureBox3.Size = new System.Drawing.Size(139, 145);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 3;
             this.pictureBox3.TabStop = false;
@@ -172,6 +162,18 @@
             this.label1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.label1_MouseDown);
             this.label1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.label1_MouseMove);
             // 
+            // registerLabel
+            // 
+            this.registerLabel.AutoSize = true;
+            this.registerLabel.BackColor = System.Drawing.Color.Chocolate;
+            this.registerLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.registerLabel.Location = new System.Drawing.Point(303, 319);
+            this.registerLabel.Name = "registerLabel";
+            this.registerLabel.Size = new System.Drawing.Size(221, 25);
+            this.registerLabel.TabIndex = 8;
+            this.registerLabel.Text = "Ещё нет аккаунта?";
+            this.registerLabel.Click += new System.EventHandler(this.label2_Click);
+            // 
             // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -199,9 +201,9 @@
         private System.Windows.Forms.Label CloseButton;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox Password;
         private System.Windows.Forms.TextBox Login;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label registerLabel;
     }
 }

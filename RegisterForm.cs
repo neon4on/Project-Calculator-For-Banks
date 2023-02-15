@@ -28,7 +28,7 @@ namespace WindowsFormsApp1
 
         private void CloseButton_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Application.Exit();
         }
 
         Point lastPoint;
@@ -79,6 +79,35 @@ namespace WindowsFormsApp1
 
         private void buttonRegister_Click(object sender, EventArgs e)
         {
+            if (userNameField.Text == "Введите имя")
+            {
+                MessageBox.Show("Введите имя");
+                return;
+            }
+
+            if (userSurnameField.Text == "")
+            {
+                MessageBox.Show("Введите surname");
+                return;
+            }
+
+            if (Login.Text == "")
+            {
+                MessageBox.Show("Введите login");
+                return;
+            }
+
+            if (textBox2.Text == "")
+            {
+                MessageBox.Show("Введите pass");
+                return;
+            }
+
+            if (isUserExists())
+            {
+                return;
+            }
+
             DB db = new DB();
             MySqlCommand command = new MySqlCommand("INSERT INTO `users` (`login`, `pass`, `name`, `surname`) VALUES (@login, @pass, @name, @surname)", db.getConnection());
 
@@ -95,6 +124,40 @@ namespace WindowsFormsApp1
                 MessageBox.Show("Acc not create");
 
             db.closeConnection();
+        }
+
+        public Boolean isUserExists()
+        {
+            DB db = new DB();
+
+            DataTable table = new DataTable();
+
+            MySqlDataAdapter adapter = new MySqlDataAdapter();
+
+            MySqlCommand command = new MySqlCommand("SELECT * FROM `users` WHERE `login` = @uL", db.getConnection()); ;
+
+            command.Parameters.Add("@uL", MySqlDbType.VarChar).Value = Login.Text;
+
+            adapter.SelectCommand = command;
+            adapter.Fill(table);
+
+            if (table.Rows.Count > 0)
+            {
+                MessageBox.Show("Такой логин уже есть, введите другой");
+                return true;
+            }
+
+            else
+            {
+                return false;
+            }
+        }
+
+        private void registerLabel_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            LoginForm loginForm = new LoginForm();
+            loginForm.Show();
         }
     }
 }

@@ -37,7 +37,7 @@ namespace WindowsFormsApp1
 
         private void CloseButton_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Application.Exit();
         }
 
         private void Login_TextChanged(object sender, EventArgs e)
@@ -110,12 +110,21 @@ namespace WindowsFormsApp1
 
             if(table.Rows.Count > 0)
             {
-                MessageBox.Show("Yes");
+                this.Hide();
+                MainForm mainForm = new MainForm();
+                mainForm.Show();
             }
             else
             {
                 MessageBox.Show("No");
             }
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            RegisterForm registerForm = new RegisterForm();
+            registerForm.Show();
         }
     }
 }

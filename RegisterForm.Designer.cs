@@ -39,6 +39,7 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.CloseButton = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.registerLabel = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -48,6 +49,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Chocolate;
+            this.panel1.Controls.Add(this.registerLabel);
             this.panel1.Controls.Add(this.textBox2);
             this.panel1.Controls.Add(this.userNameField);
             this.panel1.Controls.Add(this.buttonRegister);
@@ -67,7 +69,7 @@
             // textBox2
             // 
             this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox2.Location = new System.Drawing.Point(443, 177);
+            this.textBox2.Location = new System.Drawing.Point(585, 177);
             this.textBox2.Multiline = true;
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(203, 71);
@@ -77,7 +79,7 @@
             // userNameField
             // 
             this.userNameField.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.userNameField.Location = new System.Drawing.Point(81, 106);
+            this.userNameField.Location = new System.Drawing.Point(199, 103);
             this.userNameField.Multiline = true;
             this.userNameField.Name = "userNameField";
             this.userNameField.Size = new System.Drawing.Size(201, 65);
@@ -89,12 +91,10 @@
             // 
             this.buttonRegister.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(117)))), ((int)(((byte)(43)))));
             this.buttonRegister.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonRegister.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(48)))), ((int)(((byte)(8)))));
-            this.buttonRegister.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(61)))), ((int)(((byte)(7)))));
             this.buttonRegister.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonRegister.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonRegister.ForeColor = System.Drawing.Color.White;
-            this.buttonRegister.Location = new System.Drawing.Point(354, 397);
+            this.buttonRegister.Location = new System.Drawing.Point(357, 311);
             this.buttonRegister.Name = "buttonRegister";
             this.buttonRegister.Size = new System.Drawing.Size(100, 41);
             this.buttonRegister.TabIndex = 7;
@@ -104,7 +104,8 @@
             // 
             // userSurnameField
             // 
-            this.userSurnameField.Location = new System.Drawing.Point(443, 106);
+            this.userSurnameField.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.userSurnameField.Location = new System.Drawing.Point(585, 106);
             this.userSurnameField.Multiline = true;
             this.userSurnameField.Name = "userSurnameField";
             this.userSurnameField.Size = new System.Drawing.Size(203, 65);
@@ -114,7 +115,7 @@
             // Login
             // 
             this.Login.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Login.Location = new System.Drawing.Point(81, 177);
+            this.Login.Location = new System.Drawing.Point(199, 177);
             this.Login.Multiline = true;
             this.Login.Name = "Login";
             this.Login.Size = new System.Drawing.Size(201, 71);
@@ -123,9 +124,9 @@
             // pictureBox3
             // 
             this.pictureBox3.Image = global::WindowsFormsApp1.Properties.Resources._7007512_money_marketing_business_finance_bank_icon;
-            this.pictureBox3.Location = new System.Drawing.Point(324, 174);
+            this.pictureBox3.Location = new System.Drawing.Point(421, 106);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(93, 74);
+            this.pictureBox3.Size = new System.Drawing.Size(145, 142);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 3;
             this.pictureBox3.TabStop = false;
@@ -133,9 +134,9 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = global::WindowsFormsApp1.Properties.Resources._6811951_bank_currency_currency_exchange_exchange_finance_icon;
-            this.pictureBox2.Location = new System.Drawing.Point(0, 174);
+            this.pictureBox2.Location = new System.Drawing.Point(12, 106);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(75, 74);
+            this.pictureBox2.Size = new System.Drawing.Size(166, 142);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 2;
             this.pictureBox2.TabStop = false;
@@ -182,6 +183,18 @@
             this.label1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.label1_MouseDown);
             this.label1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.label1_MouseMove);
             // 
+            // registerLabel
+            // 
+            this.registerLabel.AutoSize = true;
+            this.registerLabel.BackColor = System.Drawing.Color.Chocolate;
+            this.registerLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.registerLabel.Location = new System.Drawing.Point(319, 386);
+            this.registerLabel.Name = "registerLabel";
+            this.registerLabel.Size = new System.Drawing.Size(186, 25);
+            this.registerLabel.TabIndex = 10;
+            this.registerLabel.Text = "Авторизоваться";
+            this.registerLabel.Click += new System.EventHandler(this.registerLabel_Click);
+            // 
             // RegisterForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -208,12 +221,13 @@
         private System.Windows.Forms.Button buttonRegister;
         private System.Windows.Forms.TextBox userSurnameField;
         private System.Windows.Forms.TextBox Login;
-        private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label CloseButton;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox userNameField;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Label registerLabel;
     }
 }
