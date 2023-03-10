@@ -100,10 +100,10 @@ namespace WindowsFormsApp1
 
             MySqlDataAdapter adapter = new MySqlDataAdapter();
 
-            MySqlCommand command = new MySqlCommand("SELECT * FROM `users` WHERE `login` = @uL AND `pass` = @uP", db.getConnection()); ;
+            MySqlCommand command = new MySqlCommand("SELECT * FROM `users` WHERE `login` = @uL", db.getConnection()); ;
 
             command.Parameters.Add("@uL", MySqlDbType.VarChar).Value = loginUser;
-            command.Parameters.Add("@uP", MySqlDbType.VarChar).Value = passUser;
+            //command.Parameters.Add("@uP", MySqlDbType.VarChar).Value = passUser;
 
             adapter.SelectCommand = command;
             adapter.Fill(table);
