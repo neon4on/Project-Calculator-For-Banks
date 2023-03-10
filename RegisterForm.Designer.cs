@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.registerLabel = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.userNameField = new System.Windows.Forms.TextBox();
             this.buttonRegister = new System.Windows.Forms.Button();
@@ -39,7 +40,6 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.CloseButton = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.registerLabel = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -66,6 +66,18 @@
             this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
             this.panel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseMove);
             // 
+            // registerLabel
+            // 
+            this.registerLabel.AutoSize = true;
+            this.registerLabel.BackColor = System.Drawing.Color.Chocolate;
+            this.registerLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.registerLabel.Location = new System.Drawing.Point(319, 386);
+            this.registerLabel.Name = "registerLabel";
+            this.registerLabel.Size = new System.Drawing.Size(186, 25);
+            this.registerLabel.TabIndex = 10;
+            this.registerLabel.Text = "Авторизоваться";
+            this.registerLabel.Click += new System.EventHandler(this.registerLabel_Click);
+            // 
             // textBox2
             // 
             this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -75,6 +87,8 @@
             this.textBox2.Size = new System.Drawing.Size(203, 71);
             this.textBox2.TabIndex = 9;
             this.textBox2.UseSystemPasswordChar = true;
+            this.textBox2.Enter += new System.EventHandler(this.textBox2_Enter);
+            this.textBox2.Leave += new System.EventHandler(this.textBox2_Leave);
             // 
             // userNameField
             // 
@@ -111,6 +125,8 @@
             this.userSurnameField.Size = new System.Drawing.Size(203, 65);
             this.userSurnameField.TabIndex = 6;
             this.userSurnameField.UseSystemPasswordChar = true;
+            this.userSurnameField.Enter += new System.EventHandler(this.userSurnameField_Enter);
+            this.userSurnameField.Leave += new System.EventHandler(this.userSurnameField_Leave);
             // 
             // Login
             // 
@@ -120,6 +136,8 @@
             this.Login.Name = "Login";
             this.Login.Size = new System.Drawing.Size(201, 71);
             this.Login.TabIndex = 5;
+            this.Login.Enter += new System.EventHandler(this.Login_Enter);
+            this.Login.Leave += new System.EventHandler(this.Login_Leave);
             // 
             // pictureBox3
             // 
@@ -182,18 +200,6 @@
             this.label1.Click += new System.EventHandler(this.label1_Click);
             this.label1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.label1_MouseDown);
             this.label1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.label1_MouseMove);
-            // 
-            // registerLabel
-            // 
-            this.registerLabel.AutoSize = true;
-            this.registerLabel.BackColor = System.Drawing.Color.Chocolate;
-            this.registerLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.registerLabel.Location = new System.Drawing.Point(319, 386);
-            this.registerLabel.Name = "registerLabel";
-            this.registerLabel.Size = new System.Drawing.Size(186, 25);
-            this.registerLabel.TabIndex = 10;
-            this.registerLabel.Text = "Авторизоваться";
-            this.registerLabel.Click += new System.EventHandler(this.registerLabel_Click);
             // 
             // RegisterForm
             // 

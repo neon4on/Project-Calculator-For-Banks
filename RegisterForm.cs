@@ -19,6 +19,12 @@ namespace WindowsFormsApp1
 
             userNameField.Text = "Введите имя";
             userNameField.ForeColor = Color.Gray;
+            userSurnameField.Text = "Введите фамилию";
+            userSurnameField.ForeColor = Color.Gray;
+            Login.Text = "Введите логин";
+            Login.ForeColor = Color.Gray;
+            textBox2.Text = "Введите пароль";
+            textBox2.ForeColor = Color.Gray;
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -85,73 +91,127 @@ namespace WindowsFormsApp1
                 return;
             }
 
-            if (userSurnameField.Text == "")
+            if (userSurnameField.Text == "Введите фамилию")
             {
                 MessageBox.Show("Введите surname");
                 return;
             }
 
-            if (Login.Text == "")
+            if (Login.Text == "Введите логин")
             {
                 MessageBox.Show("Введите login");
                 return;
             }
 
-            if (textBox2.Text == "")
+            if (textBox2.Text == "Введите пароль")
             {
                 MessageBox.Show("Введите pass");
                 return;
             }
 
-            //if (isUserExists())
-            //{
-            //    return;
-            //}
+            if (isUserExists())
+            {
+                return;
+            }
 
-            //DB db = new DB();
-            //MySqlCommand command = new MySqlCommand("INSERT INTO `users` (`login`, `pass`, `name`, `surname`) VALUES (@login, @pass, @name, @surname)", db.getConnection());
+            DB db = new DB();
+            MySqlCommand command = new MySqlCommand("INSERT INTO `users` (`login`, `pass`, `name`, `surname`) VALUES (@login, @pass, @name, @surname)", db.getConnection());
 
-            //command.Parameters.Add("@login", MySqlDbType.VarChar).Value = Login.Text;
-            //command.Parameters.Add("@pass", MySqlDbType.VarChar).Value = textBox2.Text;
-            //command.Parameters.Add("@name", MySqlDbType.VarChar).Value = userNameField.Text;
-            //command.Parameters.Add("@surname", MySqlDbType.VarChar).Value = userSurnameField.Text;
+            command.Parameters.Add("@login", MySqlDbType.VarChar).Value = Login.Text;
+            command.Parameters.Add("@pass", MySqlDbType.VarChar).Value = textBox2.Text;
+            command.Parameters.Add("@name", MySqlDbType.VarChar).Value = userNameField.Text;
+            command.Parameters.Add("@surname", MySqlDbType.VarChar).Value = userSurnameField.Text;
 
-            //db.openConnection();
+            db.openConnection();
 
-            //if (command.ExecuteNonQuery() == 1)
-            //    MessageBox.Show("Acc create");
-            //else
-            //    MessageBox.Show("Acc not create");
+            if (command.ExecuteNonQuery() == 1)
+                MessageBox.Show("Acc create");
+            else
+                MessageBox.Show("Acc not create");
 
-            //db.closeConnection();
+            db.closeConnection();
         }
 
-        //public Boolean isUserExists()
-        //{
-        //    DB db = new DB();
+        public Boolean isUserExists()
+        {
+            DB db = new DB();
 
-        //    DataTable table = new DataTable();
+            DataTable table = new DataTable();
 
-        //    MySqlDataAdapter adapter = new MySqlDataAdapter();
+            MySqlDataAdapter adapter = new MySqlDataAdapter();
 
-        //    MySqlCommand command = new MySqlCommand("SELECT * FROM `users` WHERE `login` = @uL", db.getConnection()); ;
+            MySqlCommand command = new MySqlCommand("SELECT * FROM `users` WHERE `login` = @uL", db.getConnection()); ;
 
-        //    command.Parameters.Add("@uL", MySqlDbType.VarChar).Value = Login.Text;
+            command.Parameters.Add("@uL", MySqlDbType.VarChar).Value = Login.Text;
 
-        //    adapter.SelectCommand = command;
-        //    adapter.Fill(table);
+            adapter.SelectCommand = command;
+            adapter.Fill(table);
 
-        //    if (table.Rows.Count > 0)
-        //    {
-        //        MessageBox.Show("Такой логин уже есть, введите другой");
-        //        return true;
-        //    }
+            if (table.Rows.Count > 0)
+            {
+                MessageBox.Show("Такой логин уже есть, введите другой");
+                return true;
+            }
 
-        //    else
-        //    {
-        //        return false;
-        //    }
-        //}
+            else
+            {
+                return false;
+            }
+        }
+
+        private void userSurnameField_Enter(object sender, EventArgs e)
+        {
+            if (userSurnameField.Text == "Введите фамилию")
+            {
+                userSurnameField.Text = "";
+                userSurnameField.ForeColor = Color.Black;
+            }
+        }
+
+        private void userSurnameField_Leave(object sender, EventArgs e)
+        {
+            if (userSurnameField.Text == "")
+            {
+                userSurnameField.Text = "Введите фамилию";
+                userSurnameField.ForeColor = Color.Gray;
+            }
+        }
+
+        private void Login_Enter(object sender, EventArgs e)
+        {
+            if (Login.Text == "Введите логин")
+            {
+                Login.Text = "";
+                Login.ForeColor = Color.Black;
+            }
+        }
+
+        private void Login_Leave(object sender, EventArgs e)
+        {
+            if (Login.Text == "")
+            {
+                Login.Text = "Введите логин";
+                Login.ForeColor = Color.Gray;
+            }
+        }
+
+        private void textBox2_Enter(object sender, EventArgs e)
+        {
+            if (textBox2.Text == "Введите пароль")
+            {
+                textBox2.Text = "";
+                textBox2.ForeColor = Color.Black;
+            }
+        }
+
+        private void textBox2_Leave(object sender, EventArgs e)
+        {
+            if (textBox2.Text == "")
+            {
+                textBox2.Text = "Введите пароль";
+                textBox2.ForeColor = Color.Gray;
+            }
+        }
 
         private void registerLabel_Click(object sender, EventArgs e)
         {

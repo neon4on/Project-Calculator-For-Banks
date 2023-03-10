@@ -8,9 +8,9 @@ using System.Threading.Tasks;
 
 namespace WindowsFormsApp1
 {
-    internal class DB
+    internal class DB 
     {
-        MySqlConnection connection = new MySqlConnection("server=127.0.0.1;port=3306;username=root;password=Kkkk;database=it");
+        MySqlConnection connection = new MySqlConnection("Server=127.0.0.1;Port=3306;Database=it;Uid=root;Pwd=Kkkk");
 
         public void openConnection()
         {
