@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.registerLabel = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.Password = new System.Windows.Forms.TextBox();
             this.Login = new System.Windows.Forms.TextBox();
@@ -37,7 +38,6 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.CloseButton = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.registerLabel = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -61,6 +61,18 @@
             this.panel1.TabIndex = 0;
             this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
             this.panel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseMove);
+            // 
+            // registerLabel
+            // 
+            this.registerLabel.AutoSize = true;
+            this.registerLabel.BackColor = System.Drawing.Color.Chocolate;
+            this.registerLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.registerLabel.Location = new System.Drawing.Point(303, 319);
+            this.registerLabel.Name = "registerLabel";
+            this.registerLabel.Size = new System.Drawing.Size(221, 25);
+            this.registerLabel.TabIndex = 8;
+            this.registerLabel.Text = "Ещё нет аккаунта?";
+            this.registerLabel.Click += new System.EventHandler(this.label2_Click);
             // 
             // button1
             // 
@@ -86,7 +98,6 @@
             this.Password.Size = new System.Drawing.Size(100, 20);
             this.Password.TabIndex = 6;
             this.Password.UseSystemPasswordChar = true;
-            this.Password.TextChanged += new System.EventHandler(this.Password_TextChanged);
             // 
             // Login
             // 
@@ -95,7 +106,6 @@
             this.Login.Name = "Login";
             this.Login.Size = new System.Drawing.Size(100, 20);
             this.Login.TabIndex = 5;
-            this.Login.TextChanged += new System.EventHandler(this.Login_TextChanged);
             // 
             // pictureBox3
             // 
@@ -116,7 +126,6 @@
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 2;
             this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // panel2
             // 
@@ -158,21 +167,8 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Авторизация";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             this.label1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.label1_MouseDown);
             this.label1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.label1_MouseMove);
-            // 
-            // registerLabel
-            // 
-            this.registerLabel.AutoSize = true;
-            this.registerLabel.BackColor = System.Drawing.Color.Chocolate;
-            this.registerLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.registerLabel.Location = new System.Drawing.Point(303, 319);
-            this.registerLabel.Name = "registerLabel";
-            this.registerLabel.Size = new System.Drawing.Size(221, 25);
-            this.registerLabel.TabIndex = 8;
-            this.registerLabel.Text = "Ещё нет аккаунта?";
-            this.registerLabel.Click += new System.EventHandler(this.label2_Click);
             // 
             // LoginForm
             // 

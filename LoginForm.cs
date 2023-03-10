@@ -20,34 +20,9 @@ namespace WindowsFormsApp1
             this.Password.Size = new Size(this.Password.Size.Width, this.Login.Size.Height);
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void CloseButton_Click(object sender, EventArgs e)
         {
             Application.Exit();
-        }
-
-        private void Login_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Password_TextChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void CloseButton_MouseEnter(object sender, EventArgs e)
@@ -91,33 +66,37 @@ namespace WindowsFormsApp1
 
         private void button1_Click(object sender, EventArgs e)
         {
-            String loginUser = Login.Text;
-            String passUser = Password.Text;
+            //String loginUser = Login.Text;
+            //String passUser = Password.Text;
 
-            DB db = new DB();
+            //DB db = new DB();
 
-            DataTable table = new DataTable();
+            //DataTable table = new DataTable();
 
-            MySqlDataAdapter adapter = new MySqlDataAdapter();
+            //MySqlDataAdapter adapter = new MySqlDataAdapter();
 
-            MySqlCommand command = new MySqlCommand("SELECT * FROM `users` WHERE `login` = @uL AND `pass` = @uP", db.getConnection()); ;
+            //MySqlCommand command = new MySqlCommand("SELECT * FROM `users` WHERE `login` = @uL AND `pass` = @uP", db.getConnection()); ;
 
-            command.Parameters.Add("@uL", MySqlDbType.VarChar).Value = loginUser;
-            command.Parameters.Add("@uP", MySqlDbType.VarChar).Value = passUser;
+            //command.Parameters.Add("@uL", MySqlDbType.VarChar).Value = loginUser;
+            //command.Parameters.Add("@uP", MySqlDbType.VarChar).Value = passUser;
 
-            adapter.SelectCommand = command;
-            adapter.Fill(table);
+            //adapter.SelectCommand = command;
+            //adapter.Fill(table);
 
-            if(table.Rows.Count > 0)
-            {
-                this.Hide();
-                MainForm mainForm = new MainForm();
-                mainForm.Show();
-            }
-            else
-            {
-                MessageBox.Show("No");
-            }
+            //if(table.Rows.Count > 0)
+            //{
+            //    this.Hide();
+            //    MainForm mainForm = new MainForm();
+            //    mainForm.Show();
+            //}
+            //else
+            //{
+            //    MessageBox.Show("No");
+            //}
+
+            this.Hide();
+            MainForm mainForm = new MainForm();
+            mainForm.Show();
         }
 
         private void label2_Click(object sender, EventArgs e)
