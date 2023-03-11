@@ -60,7 +60,7 @@
             this.label1.Font = new System.Drawing.Font("Microsoft YaHei UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label1.Location = new System.Drawing.Point(0, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(1440, 100);
+            this.label1.Size = new System.Drawing.Size(1080, 100);
             this.label1.TabIndex = 0;
             this.label1.Text = "Выбор банка";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -82,7 +82,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1440, 1080);
+            this.panel1.Size = new System.Drawing.Size(1080, 810);
             this.panel1.TabIndex = 1;
             // 
             // button3
@@ -96,6 +96,7 @@
             this.button3.TabIndex = 9;
             this.button3.Text = "Войти";
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button2
             // 
@@ -108,6 +109,7 @@
             this.button2.TabIndex = 8;
             this.button2.Text = "Войти";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
@@ -120,6 +122,7 @@
             this.button1.TabIndex = 7;
             this.button1.Text = "Войти";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // pictureBox6
             // 
@@ -189,7 +192,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1440, 100);
+            this.panel2.Size = new System.Drawing.Size(1080, 100);
             this.panel2.TabIndex = 0;
             // 
             // CloseButton
@@ -200,7 +203,7 @@
             this.CloseButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.CloseButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.CloseButton.ForeColor = System.Drawing.Color.Chocolate;
-            this.CloseButton.Location = new System.Drawing.Point(1402, 9);
+            this.CloseButton.Location = new System.Drawing.Point(1042, 9);
             this.CloseButton.Name = "CloseButton";
             this.CloseButton.Size = new System.Drawing.Size(26, 25);
             this.CloseButton.TabIndex = 1;
@@ -218,7 +221,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1440, 1080);
+            this.ClientSize = new System.Drawing.Size(1080, 810);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "MainForm";
