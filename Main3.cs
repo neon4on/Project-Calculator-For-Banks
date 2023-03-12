@@ -8,6 +8,7 @@ using System.Data.SqlClient;
 using System.Data.SqlTypes;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.Remoting.Messaging;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -27,11 +28,6 @@ namespace WindowsFormsApp1
             Application.Exit();
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void button4_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -39,35 +35,54 @@ namespace WindowsFormsApp1
             MainForm.Show();
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
+        private void button5_Click(object sender, EventArgs e)
         {
             DB db = new DB();
 
-            DataTable table = new DataTable();
+            String labelBalance = "3";
 
-            MySqlDataAdapter adapter = new MySqlDataAdapter();
+            db.openConnection();
 
-            MySqlCommand command = new MySqlCommand("SELECT money3 FROM `users` WHERE `id` = 3", db.getConnection()); ;
-            //MySqlDataReader dr = null;
+            MySqlCommand command = new MySqlCommand("SELECT `money3` FROM `users` WHERE `id` = @ID", db.getConnection());
 
-            //dr = command.ExecuteReader();
+            command.Parameters.AddWithValue("@ID", MySqlDbType.VarChar).Value = labelBalance;
 
-            MySqlDataReader myFurer;
-            myFurer = command.ExecuteReader();
+            MySqlDataReader da = command.ExecuteReader();
 
-            while (myFurer.Read())
+            while (da.Read())
             {
-                Console.WriteLine(myFurer.GetInt32(0) + ", " + myFurer.GetString(1));
+                label2.Text = da.GetValue(0).ToString();
             }
-
-            myFurer.Close();
-
-
-            //command.Parameters.Add("@uL", MySqlDbType.VarChar).Value = Login.Text;
-
-            //adapter.SelectCommand = command;
-            //adapter.Fill(table);
+            button5.Visible = false;
+            da.Close();
             db.closeConnection();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Main3Deposit Main3Deposit = new Main3Deposit();
+            Main3Deposit.Show();
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        //    DB db = new DB();
+
+        //    MySqlDataAdapter adapter = new MySqlDataAdapter();
+
+        //    String labelBalance = "3";
+        //    db.openConnection();
+        //        MySqlCommand command = new MySqlCommand("SELECT `money3` FROM `users` WHERE `id` = @ID", db.getConnection());
+        //    command.Parameters.AddWithValue("@ID", MySqlDbType.VarChar).Value = labelBalance;
+        //        using (MySqlDataReader da = command.ExecuteReader())
+        //        while (da.Read())
+        //        {
+        //            label2.Text = da.GetValue(0).ToString();
+        //}
+        //db.closeConnection();
     }
 }

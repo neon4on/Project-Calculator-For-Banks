@@ -124,10 +124,8 @@ namespace WindowsFormsApp1
                 MessageBox.Show("Acc create");
                 this.Hide();
                 f1 = new LoginForm();
-                
                 f1.Show();
-
-              }
+            }
             else
                 MessageBox.Show("Acc not create");
 

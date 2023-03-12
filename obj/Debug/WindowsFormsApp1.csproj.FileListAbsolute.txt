@@ -96,3 +96,7 @@ C:\Users\Artur\Desktop\Project-Calculator-For-Banks-main\obj\Debug\WindowsFormsA
 C:\Users\Artur\Desktop\Project-Calculator-For-Banks-main\obj\Debug\WindowsFormsApp1.csproj.CopyComplete
 C:\Users\Artur\Desktop\Project-Calculator-For-Banks-main\obj\Debug\WindowsFormsApp1.exe
 C:\Users\Artur\Desktop\Project-Calculator-For-Banks-main\obj\Debug\WindowsFormsApp1.pdb
+C:\Users\Rush\Desktop\Project-Calculator-For-Banks-main\obj\Debug\WindowsFormsApp1.Main1.resources
+C:\Users\Rush\Desktop\Project-Calculator-For-Banks-main\obj\Debug\WindowsFormsApp1.Main2.resources
+C:\Users\Rush\Desktop\Project-Calculator-For-Banks-main\obj\Debug\WindowsFormsApp1.Main3.resources
+C:\Users\Rush\Desktop\Project-Calculator-For-Banks-main\obj\Debug\WindowsFormsApp1.Main3Deposit.resources
