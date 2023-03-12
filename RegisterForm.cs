@@ -27,10 +27,6 @@ namespace WindowsFormsApp1
             textBox2.ForeColor = Color.Gray;
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void CloseButton_Click(object sender, EventArgs e)
         {
@@ -123,9 +119,15 @@ namespace WindowsFormsApp1
             //command.Parameters.Add("@surname", MySqlDbType.VarChar).Value = userSurnameField.Text;
 
             db.openConnection();
-
-            if (command.ExecuteNonQuery() == 1)
+            LoginForm f1;
+            if (command.ExecuteNonQuery() == 1) {
                 MessageBox.Show("Acc create");
+                this.Hide();
+                f1 = new LoginForm();
+                
+                f1.Show();
+
+              }
             else
                 MessageBox.Show("Acc not create");
 
@@ -219,5 +221,7 @@ namespace WindowsFormsApp1
             LoginForm loginForm = new LoginForm();
             loginForm.Show();
         }
+
+
     }
 }

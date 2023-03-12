@@ -57,24 +57,6 @@
     <Compile Include="LoginForm.Designer.cs">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Main1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Main1.Designer.cs">
-      <DependentUpon>Main1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Main2.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Main2.Designer.cs">
-      <DependentUpon>Main2.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Main3.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Main3.Designer.cs">
-      <DependentUpon>Main3.cs</DependentUpon>
-    </Compile>
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -91,15 +73,6 @@
     </Compile>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Main1.resx">
-      <DependentUpon>Main1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Main2.resx">
-      <DependentUpon>Main2.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Main3.resx">
-      <DependentUpon>Main3.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
@@ -138,6 +111,11 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="images\7007512_money_marketing_business_finance_bank_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="images\9850982.png" />
+    <None Include="Resources\j2k_8dkpAVY.jpg" />
+    <None Include="Resources\9850982.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

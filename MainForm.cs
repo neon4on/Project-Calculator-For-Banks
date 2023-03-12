@@ -17,35 +17,15 @@ namespace WindowsFormsApp1
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void CloseButton_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void pictureBox2_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Main1 Main1Form = new Main1();
-            Main1Form.Show();
-        }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            Main2 Main2Form = new Main2();
-            Main2Form.Show();
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            Main3 Main3Form = new Main3();
-            Main3Form.Show();
         }
     }
 }

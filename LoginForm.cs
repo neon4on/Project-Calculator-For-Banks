@@ -18,36 +18,13 @@ namespace WindowsFormsApp1
             InitializeComponent();
             this.Password.AutoSize = false;
             this.Password.Size = new Size(this.Password.Size.Width, this.Login.Size.Height);
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
 
         }
 
-        private void pictureBox2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void CloseButton_Click(object sender, EventArgs e)
         {
             Application.Exit();
-        }
-
-        private void Login_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Password_TextChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void CloseButton_MouseEnter(object sender, EventArgs e)
@@ -123,14 +100,26 @@ namespace WindowsFormsApp1
             //mainForm.Show();
         }
 
-        private void label2_Click(object sender, EventArgs e)
+
+
+
+
+
+
+        private void button3_Click(object sender, EventArgs e)
         {
             this.Hide();
             RegisterForm registerForm = new RegisterForm();
             registerForm.Show();
+
         }
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
         {
 
         }

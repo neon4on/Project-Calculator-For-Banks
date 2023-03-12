@@ -59,12 +59,13 @@
             this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label1.Font = new System.Drawing.Font("Microsoft YaHei UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label1.Location = new System.Drawing.Point(0, 0);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(1080, 100);
+            this.label1.Size = new System.Drawing.Size(450, 123);
             this.label1.TabIndex = 0;
             this.label1.Text = "Выбор банка";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+
             // 
             // panel1
             // 
@@ -81,8 +82,9 @@
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1080, 810);
+            this.panel1.Size = new System.Drawing.Size(450, 1102);
             this.panel1.TabIndex = 1;
             // 
             // button3
@@ -90,45 +92,46 @@
             this.button3.BackColor = System.Drawing.SystemColors.Highlight;
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(625, 398);
+            this.button3.Location = new System.Drawing.Point(833, 490);
+            this.button3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(100, 40);
+            this.button3.Size = new System.Drawing.Size(133, 49);
             this.button3.TabIndex = 9;
             this.button3.Text = "Войти";
             this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button2
             // 
             this.button2.BackColor = System.Drawing.SystemColors.Highlight;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(356, 398);
+            this.button2.Location = new System.Drawing.Point(475, 490);
+            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(100, 40);
+            this.button2.Size = new System.Drawing.Size(133, 49);
             this.button2.TabIndex = 8;
             this.button2.Text = "Войти";
             this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.SystemColors.Highlight;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(89, 398);
+            this.button1.Location = new System.Drawing.Point(119, 490);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(100, 40);
+            this.button1.Size = new System.Drawing.Size(133, 49);
             this.button1.TabIndex = 7;
             this.button1.Text = "Войти";
             this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // pictureBox6
             // 
             this.pictureBox6.BackColor = System.Drawing.Color.Black;
             this.pictureBox6.Image = global::WindowsFormsApp1.Properties.Resources._7007512_money_marketing_business_finance_bank_icon;
-            this.pictureBox6.Location = new System.Drawing.Point(541, 103);
+            this.pictureBox6.Location = new System.Drawing.Point(721, 127);
+            this.pictureBox6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(256, 256);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -139,7 +142,8 @@
             // 
             this.pictureBox5.BackColor = System.Drawing.Color.Red;
             this.pictureBox5.Image = global::WindowsFormsApp1.Properties.Resources._6811951_bank_currency_currency_exchange_exchange_finance_icon;
-            this.pictureBox5.Location = new System.Drawing.Point(274, 103);
+            this.pictureBox5.Location = new System.Drawing.Point(365, 127);
+            this.pictureBox5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(256, 256);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -150,7 +154,8 @@
             // 
             this.pictureBox4.BackColor = System.Drawing.Color.Green;
             this.pictureBox4.Image = global::WindowsFormsApp1.Properties.Resources._1419135_sberbank_icon;
-            this.pictureBox4.Location = new System.Drawing.Point(5, 103);
+            this.pictureBox4.Location = new System.Drawing.Point(7, 127);
+            this.pictureBox4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(256, 256);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -160,27 +165,31 @@
             // pictureBox3
             // 
             this.pictureBox3.BackColor = System.Drawing.Color.Red;
-            this.pictureBox3.Location = new System.Drawing.Point(268, 95);
+            this.pictureBox3.Location = new System.Drawing.Point(357, 117);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(268, 355);
+            this.pictureBox3.Size = new System.Drawing.Size(357, 437);
             this.pictureBox3.TabIndex = 3;
             this.pictureBox3.TabStop = false;
             // 
             // pictureBox2
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.Green;
-            this.pictureBox2.Location = new System.Drawing.Point(0, 95);
+            this.pictureBox2.Location = new System.Drawing.Point(0, 117);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(268, 355);
+            this.pictureBox2.Size = new System.Drawing.Size(357, 437);
             this.pictureBox2.TabIndex = 2;
             this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Black;
-            this.pictureBox1.Location = new System.Drawing.Point(536, 95);
+            this.pictureBox1.Location = new System.Drawing.Point(715, 117);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(268, 355);
+            this.pictureBox1.Size = new System.Drawing.Size(357, 437);
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
@@ -191,8 +200,9 @@
             this.panel2.Controls.Add(this.label1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1080, 100);
+            this.panel2.Size = new System.Drawing.Size(450, 123);
             this.panel2.TabIndex = 0;
             // 
             // CloseButton
@@ -203,9 +213,10 @@
             this.CloseButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.CloseButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.CloseButton.ForeColor = System.Drawing.Color.Chocolate;
-            this.CloseButton.Location = new System.Drawing.Point(1042, 9);
+            this.CloseButton.Location = new System.Drawing.Point(399, 11);
+            this.CloseButton.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.CloseButton.Name = "CloseButton";
-            this.CloseButton.Size = new System.Drawing.Size(26, 25);
+            this.CloseButton.Size = new System.Drawing.Size(32, 31);
             this.CloseButton.TabIndex = 1;
             this.CloseButton.Text = "X";
             this.CloseButton.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -219,11 +230,12 @@
             // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1080, 810);
+            this.ClientSize = new System.Drawing.Size(450, 1102);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MainForm";
