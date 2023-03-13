@@ -69,6 +69,13 @@ namespace WindowsFormsApp1
         {
 
         }
+        Main4  f2;
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            f2 = new Main4();
+            f2.Show();
+        }
 
         //    DB db = new DB();
 

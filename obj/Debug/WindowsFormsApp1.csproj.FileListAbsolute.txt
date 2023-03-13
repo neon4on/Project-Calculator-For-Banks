@@ -100,3 +100,8 @@ C:\Users\Rush\Desktop\Project-Calculator-For-Banks-main\obj\Debug\WindowsFormsAp
 C:\Users\Rush\Desktop\Project-Calculator-For-Banks-main\obj\Debug\WindowsFormsApp1.Main2.resources
 C:\Users\Rush\Desktop\Project-Calculator-For-Banks-main\obj\Debug\WindowsFormsApp1.Main3.resources
 C:\Users\Rush\Desktop\Project-Calculator-For-Banks-main\obj\Debug\WindowsFormsApp1.Main3Deposit.resources
+C:\Users\Artur\Desktop\Project-Calculator-For-Banks-main\obj\Debug\WindowsFormsApp1.Main1.resources
+C:\Users\Artur\Desktop\Project-Calculator-For-Banks-main\obj\Debug\WindowsFormsApp1.Main2.resources
+C:\Users\Artur\Desktop\Project-Calculator-For-Banks-main\obj\Debug\WindowsFormsApp1.Main3.resources
+C:\Users\Artur\Desktop\Project-Calculator-For-Banks-main\obj\Debug\WindowsFormsApp1.Main3Deposit.resources
+C:\Users\Artur\Desktop\Project-Calculator-For-Banks-main\obj\Debug\WindowsFormsApp1.Main4.resources

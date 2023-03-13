@@ -77,7 +77,7 @@ namespace WindowsFormsApp1
 
             MySqlDataAdapter adapter = new MySqlDataAdapter();
 
-            MySqlCommand command = new MySqlCommand("SELECT * FROM `users` WHERE `login` = @uL and `pass` = @uP", db.getConnection()); ;
+            MySqlCommand command = new MySqlCommand("SELECT * FROM `users` WHERE `login` = @uL", db.getConnection()); ;
 
             command.Parameters.Add("@uL", MySqlDbType.VarChar).Value = loginUser;
             command.Parameters.Add("@uP", MySqlDbType.VarChar).Value = passUser;
@@ -119,12 +119,13 @@ namespace WindowsFormsApp1
 
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
+
+        private void Login_TextChanged(object sender, EventArgs e)
         {
 
         }
 
-        private void Login_TextChanged(object sender, EventArgs e)
+        private void label1_Click(object sender, EventArgs e)
         {
 
         }
