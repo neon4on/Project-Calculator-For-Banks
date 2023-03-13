@@ -15,6 +15,7 @@ namespace WindowsFormsApp1
         public Main4()
         {
             InitializeComponent();
+
         }
 
         private void label3_Click(object sender, EventArgs e)
@@ -25,8 +26,36 @@ namespace WindowsFormsApp1
         private void button1_Click(object sender, EventArgs e)
         {
             double n, proc, time, rper, monthproc;
-            double sum = Convert.ToInt32(textBox1.Text)/*  */, popsum = Convert.ToInt32(textBox4.Text);
+            if (textBox1.Text == "")
+            {
+                MessageBox.Show("Введите начальную сумму");
+                return;
+            }
+            if (textBox2.Text == "")
+            {
+                MessageBox.Show("Введите время удержания в годах");
+                return;
+            }
+            if (textBox3.Text == "")
+            {
+                MessageBox.Show("Введите процентную ставку");
+                return;
+            }
+            if (textBox5.Text == "")
+            {
+                MessageBox.Show("Введите расчетный период вашего банка");
+                return;
+            }
+            double sum = Convert.ToInt32(textBox1.Text), popsum;
 
+            if (textBox4.Text != "")
+            {
+                popsum = Convert.ToInt32(textBox4.Text);
+            }
+            else
+            {
+                popsum = 0;
+            }
             proc = Convert.ToDouble(textBox3.Text);
             time = Convert.ToDouble(textBox2.Text);
             rper = Convert.ToDouble(textBox5.Text);
@@ -40,6 +69,7 @@ namespace WindowsFormsApp1
 
             }
             textBox6.Text = sum.ToString();
+
         }
 
         private void label7_Click(object sender, EventArgs e)
@@ -52,6 +82,16 @@ namespace WindowsFormsApp1
             this.Hide();
             f2 = new Main3();
             f2.Show();
+        }
+
+        private void label7_MouseEnter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
