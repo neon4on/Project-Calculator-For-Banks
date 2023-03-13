@@ -49,10 +49,9 @@
             this.CloseButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.CloseButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.CloseButton.ForeColor = System.Drawing.Color.Chocolate;
-            this.CloseButton.Location = new System.Drawing.Point(1389, 11);
-            this.CloseButton.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.CloseButton.Location = new System.Drawing.Point(1042, 9);
             this.CloseButton.Name = "CloseButton";
-            this.CloseButton.Size = new System.Drawing.Size(32, 31);
+            this.CloseButton.Size = new System.Drawing.Size(26, 25);
             this.CloseButton.TabIndex = 2;
             this.CloseButton.Text = "X";
             this.CloseButton.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -61,12 +60,10 @@
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.White;
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(633, 245);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
+            this.button1.Location = new System.Drawing.Point(475, 199);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(133, 37);
+            this.button1.Size = new System.Drawing.Size(100, 30);
             this.button1.TabIndex = 3;
             this.button1.Text = "Пополнить";
             this.button1.UseVisualStyleBackColor = false;
@@ -75,33 +72,33 @@
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(633, 491);
-            this.button2.Margin = new System.Windows.Forms.Padding(4);
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Location = new System.Drawing.Point(475, 399);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(133, 37);
+            this.button2.Size = new System.Drawing.Size(100, 30);
             this.button2.TabIndex = 4;
             this.button2.Text = "Калькулятор";
             this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
             this.button3.BackColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(633, 362);
-            this.button3.Margin = new System.Windows.Forms.Padding(4);
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Location = new System.Drawing.Point(475, 294);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(133, 37);
+            this.button3.Size = new System.Drawing.Size(100, 30);
             this.button3.TabIndex = 5;
             this.button3.Text = "Вывести";
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button4
             // 
             this.button4.BackColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(580, 592);
-            this.button4.Margin = new System.Windows.Forms.Padding(4);
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.Location = new System.Drawing.Point(435, 481);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(233, 64);
+            this.button4.Size = new System.Drawing.Size(175, 52);
             this.button4.TabIndex = 6;
             this.button4.Text = "Выбрать другой банк";
             this.button4.UseVisualStyleBackColor = false;
@@ -112,10 +109,9 @@
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(557, 123);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(418, 100);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(293, 29);
+            this.label1.Size = new System.Drawing.Size(230, 24);
             this.label1.TabIndex = 7;
             this.label1.Text = "Баланс пользователя:";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -124,10 +120,9 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.Location = new System.Drawing.Point(684, 153);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(513, 124);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(27, 29);
+            this.label2.Size = new System.Drawing.Size(21, 24);
             this.label2.TabIndex = 8;
             this.label2.Text = "0";
             // 
@@ -136,10 +131,10 @@
             this.button5.BackColor = System.Drawing.Color.White;
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button5.Location = new System.Drawing.Point(647, 156);
+            this.button5.Location = new System.Drawing.Point(485, 127);
             this.button5.Margin = new System.Windows.Forms.Padding(0);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(100, 28);
+            this.button5.Size = new System.Drawing.Size(75, 23);
             this.button5.TabIndex = 9;
             this.button5.Text = "*****";
             this.button5.UseVisualStyleBackColor = false;
@@ -150,9 +145,10 @@
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.White;
             this.label4.Font = new System.Drawing.Font("Mongolian Baiti", 49.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(188, 34);
+            this.label4.Location = new System.Drawing.Point(101, 31);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(369, 89);
+            this.label4.Size = new System.Drawing.Size(297, 71);
             this.label4.TabIndex = 13;
             this.label4.Text = "BankItem";
             // 
@@ -160,20 +156,19 @@
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.GhostWhite;
             this.pictureBox2.Image = global::WindowsFormsApp1.Properties.Resources.j2k_8dkpAVY;
-            this.pictureBox2.Location = new System.Drawing.Point(15, 11);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox2.Location = new System.Drawing.Point(11, 9);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(167, 141);
+            this.pictureBox2.Size = new System.Drawing.Size(100, 103);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 12;
             this.pictureBox2.TabStop = false;
             // 
             // Main3
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1440, 997);
+            this.ClientSize = new System.Drawing.Size(1080, 810);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.button5);
@@ -185,7 +180,6 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.CloseButton);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Main3";
             this.Text = "Main3";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();

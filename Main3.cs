@@ -65,16 +65,11 @@ namespace WindowsFormsApp1
             Main3Deposit.Show();
         }
 
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-        Main4  f2;
-        private void button2_Click(object sender, EventArgs e)
+        private void button3_Click(object sender, EventArgs e)
         {
             this.Hide();
-            f2 = new Main4();
-            f2.Show();
+            Main3Withdraw Main3Main3Withdraw = new Main3Withdraw();
+            Main3Main3Withdraw.Show();
         }
 
         //    DB db = new DB();
