@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Reflection.Emit;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -74,6 +75,7 @@ namespace WindowsFormsApp1
 
         private void label7_Click(object sender, EventArgs e)
         {
+
             Application.Exit();
         }
         Main3 f2;
@@ -86,12 +88,26 @@ namespace WindowsFormsApp1
 
         private void label7_MouseEnter(object sender, EventArgs e)
         {
-
+            label7.ForeColor = Color.Red;
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
+        private void label7_MouseLeave(object sender, EventArgs e)
         {
+            label7.ForeColor = Color.Black;
+        }
+        Point lastPoint;
+        private void Main4_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                this.Left += e.X - lastPoint.X;
+                this.Top += e.Y - lastPoint.Y;
+            }
+        }
 
+        private void Main4_MouseDown(object sender, MouseEventArgs e)
+        {
+            lastPoint = new Point(e.X, e.Y);
         }
     }
 }

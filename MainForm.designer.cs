@@ -64,13 +64,15 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1188, 1100);
             this.panel1.TabIndex = 1;
+            this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
+            this.panel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseMove);
             // 
             // button4
             // 
             this.button4.BackColor = System.Drawing.SystemColors.ButtonShadow;
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(1042, 594);
+            this.button4.Location = new System.Drawing.Point(13, 638);
             this.button4.Margin = new System.Windows.Forms.Padding(4);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(133, 49);
@@ -164,6 +166,8 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1188, 149);
             this.panel2.TabIndex = 0;
+            this.panel2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseDown);
+            this.panel2.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseMove);
             // 
             // label4
             // 

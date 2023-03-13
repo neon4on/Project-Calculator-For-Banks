@@ -72,6 +72,13 @@ namespace WindowsFormsApp1
             Main3Main3Withdraw.Show();
         }
 
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Main4 a = new Main4();
+            a.Show();
+        }
+
         //    DB db = new DB();
 
         //    MySqlDataAdapter adapter = new MySqlDataAdapter();

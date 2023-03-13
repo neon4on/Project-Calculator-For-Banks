@@ -57,7 +57,6 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(242, 39);
             this.textBox1.TabIndex = 0;
-
             // 
             // contextMenuStrip1
             // 
@@ -200,6 +199,7 @@
             this.label7.AutoSize = true;
             this.label7.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label7.ForeColor = System.Drawing.Color.Black;
             this.label7.Location = new System.Drawing.Point(714, 3);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(30, 29);
@@ -207,6 +207,7 @@
             this.label7.Text = "X";
             this.label7.Click += new System.EventHandler(this.label7_Click);
             this.label7.MouseEnter += new System.EventHandler(this.label7_MouseEnter);
+            this.label7.MouseLeave += new System.EventHandler(this.label7_MouseLeave);
             // 
             // label8
             // 
@@ -244,6 +245,8 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Main4";
             this.Text = "Main4";
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Main4_MouseDown);
+            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Main4_MouseMove);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

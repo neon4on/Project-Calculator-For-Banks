@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Reflection.Emit;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -16,15 +17,12 @@ namespace WindowsFormsApp1
         public RegisterForm()
         {
             InitializeComponent();
-
-            userNameField.Text = "Введите имя";
-            userNameField.ForeColor = Color.Gray;
-            userSurnameField.Text = "Введите фамилию";
-            userSurnameField.ForeColor = Color.Gray;
             Login.Text = "Введите логин";
             Login.ForeColor = Color.Gray;
             textBox2.Text = "Введите пароль";
             textBox2.ForeColor = Color.Gray;
+            textBox1.Text = "Повторите пароль";
+            textBox1.ForeColor = Color.Gray;
         }
 
 
@@ -62,36 +60,13 @@ namespace WindowsFormsApp1
             lastPoint = new Point(e.X, e.Y);
         }
 
-        private void userNameField_Enter(object sender, EventArgs e)
-        {
-            if (userNameField.Text == "Введите имя"){
-                userNameField.Text = "";
-                userNameField.ForeColor = Color.Black;
-            }   
-        }
 
-        private void userNameField_Leave(object sender, EventArgs e)
-        {
-            if (userNameField.Text == "")
-            {
-                userNameField.Text = "Введите имя";
-                userNameField.ForeColor = Color.Gray;
-            }
-        }
 
         private void buttonRegister_Click(object sender, EventArgs e)
         {
-            if (userNameField.Text == "Введите имя")
-            {
-                MessageBox.Show("Введите имя");
-                return;
-            }
 
-            if (userSurnameField.Text == "Введите фамилию")
-            {
-                MessageBox.Show("Введите surname");
-                return;
-            }
+
+
 
             if (Login.Text == "Введите логин")
             {
@@ -102,6 +77,11 @@ namespace WindowsFormsApp1
             if (textBox2.Text == "Введите пароль")
             {
                 MessageBox.Show("Введите pass");
+                return;
+            }
+            if (textBox1.Text != textBox2.Text)
+            {
+                MessageBox.Show("Пароль неверный");
                 return;
             }
 
@@ -159,23 +139,7 @@ namespace WindowsFormsApp1
             }
         }
 
-        private void userSurnameField_Enter(object sender, EventArgs e)
-        {
-            if (userSurnameField.Text == "Введите фамилию")
-            {
-                userSurnameField.Text = "";
-                userSurnameField.ForeColor = Color.Black;
-            }
-        }
-
-        private void userSurnameField_Leave(object sender, EventArgs e)
-        {
-            if (userSurnameField.Text == "")
-            {
-                userSurnameField.Text = "Введите фамилию";
-                userSurnameField.ForeColor = Color.Gray;
-            }
-        }
+  
 
         private void Login_Enter(object sender, EventArgs e)
         {
@@ -220,6 +184,49 @@ namespace WindowsFormsApp1
             loginForm.Show();
         }
 
+        private void userNameField_TextChanged(object sender, EventArgs e)
+        {
 
+        }
+
+        private void Login_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            LoginForm loginForm = new LoginForm();
+            loginForm.Show();
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_Enter(object sender, EventArgs e)
+        {
+            if (textBox1.Text == "Введите пароль")
+            {
+                textBox1.Text = "";
+                textBox1.ForeColor = Color.Black;
+            }
+        }
+
+        private void textBox1_Leave(object sender, EventArgs e)
+        {
+            if (textBox1.Text == "")
+            {
+                textBox1.Text = "Введите пароль";
+                textBox1.ForeColor = Color.Gray;
+            }
+        }
     }
 }
