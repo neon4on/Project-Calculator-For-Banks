@@ -26,7 +26,11 @@ namespace WindowsFormsApp1
             textBox2.ForeColor = Color.Gray;
             textBox1.Text = "Повторите пароль";
             textBox1.ForeColor = Color.Gray;
-        
+            this.textBox1.AutoSize = false;
+            this.textBox1.Size = new Size(this.textBox1.Width, Login.Height);
+            this.textBox2.AutoSize = false;
+            this.textBox2.Size = new Size(this.textBox1.Width, Login.Height);
+
         }
 
         Point lastPoint;
@@ -152,6 +156,7 @@ namespace WindowsFormsApp1
             {
                 textBox2.Text = "";
                 textBox2.ForeColor = Color.Black;
+                textBox2.UseSystemPasswordChar = true;
             }
         }
 
@@ -159,6 +164,7 @@ namespace WindowsFormsApp1
         {
             if (textBox2.Text == "")
             {
+                textBox2.UseSystemPasswordChar = false;
                 textBox2.Text = "Введите пароль";
                 textBox2.ForeColor = Color.Gray;
             }
@@ -168,22 +174,24 @@ namespace WindowsFormsApp1
         {
             if (textBox1.Text == "Повторите пароль")
             {
+
                 textBox1.Text = "";
-                this.textBox1.AutoSize = false;
-                this.textBox1.Size = new Size(this.textBox1.Width, Login.Height);
-                
                 textBox1.ForeColor = Color.Black;
-                
+
+                textBox1.UseSystemPasswordChar = true;
             }
+
         }
 
         private void textBox1_Leave(object sender, EventArgs e)
         {
             if (textBox1.Text == "")
             {
+                textBox1.UseSystemPasswordChar = false;
                 textBox1.Text = "Повторите пароль";
                 textBox1.ForeColor = Color.Gray;
             }
+
         }
 
         private void label1_Click_1(object sender, EventArgs e)
@@ -193,6 +201,14 @@ namespace WindowsFormsApp1
             loginForm.Show();
         }
 
-     
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -73,7 +73,7 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(312, 46);
             this.textBox1.TabIndex = 27;
-            this.textBox1.UseSystemPasswordChar = true;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             this.textBox1.Enter += new System.EventHandler(this.textBox1_Enter_1);
             this.textBox1.Leave += new System.EventHandler(this.textBox1_Leave);
             // 
@@ -85,7 +85,6 @@
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(312, 46);
             this.textBox2.TabIndex = 28;
-            this.textBox2.UseSystemPasswordChar = true;
             this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             this.textBox2.Enter += new System.EventHandler(this.textBox2_Enter_1);
             this.textBox2.Leave += new System.EventHandler(this.textBox2_Leave_1);
