@@ -32,26 +32,33 @@ namespace WindowsFormsApp1
 
         private void button1_Click(object sender, EventArgs e)
         {
-            DB db = new DB();
-            MySqlCommand command = new MySqlCommand("UPDATE `users` SET `money3` = `money3` - @money3", db.getConnection());
-
-            command.Parameters.Add("@money3", MySqlDbType.VarChar).Value = textBox1.Text;
-
-            db.openConnection();
-
-            Main3 f1;
-
-            if (command.ExecuteNonQuery() == 1)
+            if (Convert.ToInt32(textBox1.Text) >= 0)
             {
-                MessageBox.Show("Не возможно пополнить");
-                this.Hide();
-                f1 = new Main3();
-                f1.Show();
+                DB db = new DB();
+                MySqlCommand command = new MySqlCommand("UPDATE `users` SET `money3` = `money3` - @money3", db.getConnection());
+
+                command.Parameters.Add("@money3", MySqlDbType.VarChar).Value = textBox1.Text;
+
+                db.openConnection();
+
+                Main3 f1;
+
+                if (command.ExecuteNonQuery() == 1)
+                {
+                    MessageBox.Show("Не возможно пополнить");
+                    this.Hide();
+                    f1 = new Main3();
+                    f1.Show();
+                }
+                else
+                    MessageBox.Show("Сумма внесена");
+
+                db.closeConnection();
             }
             else
-                MessageBox.Show("Сумма внесена");
-
-            db.closeConnection();
+            {
+                MessageBox.Show("Введите положительное число");
+            }
         }
 
         private void CloseButton_Click(object sender, EventArgs e)

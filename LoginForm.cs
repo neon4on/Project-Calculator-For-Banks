@@ -72,7 +72,7 @@ namespace WindowsFormsApp1
             String passUser = Password.Text;
 
             DB db = new DB();
-
+            db.openConnection();
             DataTable table = new DataTable();
 
             MySqlDataAdapter adapter = new MySqlDataAdapter();
