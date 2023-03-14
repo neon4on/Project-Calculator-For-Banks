@@ -32,7 +32,7 @@ namespace WindowsFormsApp1
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (Convert.ToInt32(textBox1.Text) >= 0)
+            if (Convert.ToInt32(textBox1.Text) > 0)
             {
                 DB db = new DB();
                 MySqlCommand command = new MySqlCommand("UPDATE `users` SET `money3` = `money3` - @money3", db.getConnection());
@@ -45,13 +45,13 @@ namespace WindowsFormsApp1
 
                 if (command.ExecuteNonQuery() == 1)
                 {
-                    MessageBox.Show("Не возможно пополнить");
+                    MessageBox.Show("Невозможно вывести");
                     this.Hide();
                     f1 = new Main3();
                     f1.Show();
                 }
                 else
-                    MessageBox.Show("Сумма внесена");
+                    MessageBox.Show("Сумма выведена");
 
                 db.closeConnection();
             }
