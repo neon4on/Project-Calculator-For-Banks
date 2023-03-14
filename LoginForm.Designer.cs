@@ -111,6 +111,7 @@
             this.Password.Size = new System.Drawing.Size(504, 40);
             this.Password.TabIndex = 6;
             this.Password.UseSystemPasswordChar = true;
+            this.Password.TextChanged += new System.EventHandler(this.Password_TextChanged);
             // 
             // Login
             // 

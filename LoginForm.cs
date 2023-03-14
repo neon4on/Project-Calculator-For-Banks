@@ -72,7 +72,7 @@ namespace WindowsFormsApp1
             String passUser = Password.Text;
 
             DB db = new DB();
-            db.openConnection();
+
             DataTable table = new DataTable();
 
             MySqlDataAdapter adapter = new MySqlDataAdapter();
@@ -130,6 +130,11 @@ namespace WindowsFormsApp1
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void Password_TextChanged(object sender, EventArgs e)
         {
 
         }

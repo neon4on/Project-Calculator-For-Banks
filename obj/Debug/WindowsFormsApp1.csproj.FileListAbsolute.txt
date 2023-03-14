@@ -138,4 +138,3 @@ C:\Users\Artur\Desktop\Project-Calculator-For-Banks-main\obj\Debug\WindowsFormsA
 C:\Users\Artur\Desktop\Project-Calculator-For-Banks-main\obj\Debug\WindowsFormsApp1.Main3Deposit.resources
 C:\Users\Artur\Desktop\Project-Calculator-For-Banks-main\obj\Debug\WindowsFormsApp1.Main3Withdraw.resources
 C:\Users\Artur\Desktop\Project-Calculator-For-Banks-main\obj\Debug\WindowsFormsApp1.Main4.resources
-C:\Users\Rush\Desktop\Project-Calculator-For-Banks-main\obj\Debug\WindowsFormsApp1.Main4.resources

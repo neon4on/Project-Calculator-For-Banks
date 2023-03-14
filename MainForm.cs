@@ -45,7 +45,7 @@ namespace WindowsFormsApp1
         LoginForm f2;
         private void button4_Click(object sender, EventArgs e)
         {
-            var result=MessageBox.Show("Нажмите да, если хотите и нет в ином случае", "Вы точно хотите выйти?" ,MessageBoxButtons.YesNo);
+            var result=MessageBox.Show("", "Вы точно хотите выйти?" ,MessageBoxButtons.YesNo);
             if (result == DialogResult.Yes)
             {
                 this.Hide();

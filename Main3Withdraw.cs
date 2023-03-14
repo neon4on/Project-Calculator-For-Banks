@@ -16,7 +16,7 @@ namespace WindowsFormsApp1
         public Main3Withdraw()
         {
             InitializeComponent();
-            textBox1.Text = "Введите значение: ";
+            textBox1.Text = "Введите значение:";
             textBox1.ForeColor = Color.Gray;
         }
 
@@ -32,33 +32,26 @@ namespace WindowsFormsApp1
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (Convert.ToInt32(textBox1.Text) > 0)
+            DB db = new DB();
+            MySqlCommand command = new MySqlCommand("UPDATE `users` SET `money3` = `money3` - @money3", db.getConnection());
+
+            command.Parameters.Add("@money3", MySqlDbType.VarChar).Value = textBox1.Text;
+
+            db.openConnection();
+
+            Main3 f1;
+
+            if (command.ExecuteNonQuery() == 1)
             {
-                DB db = new DB();
-                MySqlCommand command = new MySqlCommand("UPDATE `users` SET `money3` = `money3` - @money3", db.getConnection());
-
-                command.Parameters.Add("@money3", MySqlDbType.VarChar).Value = textBox1.Text;
-
-                db.openConnection();
-
-                Main3 f1;
-
-                if (command.ExecuteNonQuery() == 1)
-                {
-                    MessageBox.Show("Невозможно вывести");
-                    this.Hide();
-                    f1 = new Main3();
-                    f1.Show();
-                }
-                else
-                    MessageBox.Show("Сумма выведена");
-
-                db.closeConnection();
+                MessageBox.Show("Не возможно пополнить");
+                this.Hide();
+                f1 = new Main3();
+                f1.Show();
             }
             else
-            {
-                MessageBox.Show("Введите положительное число");
-            }
+                MessageBox.Show("Сумма снята");
+
+            db.closeConnection();
         }
 
         private void CloseButton_Click(object sender, EventArgs e)
@@ -71,6 +64,24 @@ namespace WindowsFormsApp1
             this.Hide();
             Main3 Main3 = new Main3();
             Main3.Show();
+        }
+
+        private void textBox1_Enter(object sender, EventArgs e)
+        {
+            if (textBox1.Text == "Введите значение:")
+            {
+                textBox1.Text = "";
+                textBox1.ForeColor = Color.Black; 
+            }
+        }
+
+        private void textBox1_Leave(object sender, EventArgs e)
+        {
+            if (textBox1.Text == "")
+            {
+                textBox1.Text = "Введите значение:";
+                textBox1.ForeColor = Color.Gray;
+            }
         }
     }
 }

@@ -9,6 +9,7 @@ using System.Reflection.Emit;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace WindowsFormsApp1
 {
@@ -17,22 +18,51 @@ namespace WindowsFormsApp1
         public RegisterForm()
         {
             InitializeComponent();
+            
+
             Login.Text = "Введите логин";
             Login.ForeColor = Color.Gray;
             textBox2.Text = "Введите пароль";
             textBox2.ForeColor = Color.Gray;
             textBox1.Text = "Повторите пароль";
             textBox1.ForeColor = Color.Gray;
-        }
-
-
-        private void CloseButton_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
+        
         }
 
         Point lastPoint;
-        private void label1_MouseMove(object sender, MouseEventArgs e)
+
+      
+
+        public Boolean isUserExists()
+        {
+            DB db = new DB();
+
+            DataTable table = new DataTable();
+
+            MySqlDataAdapter adapter = new MySqlDataAdapter();
+
+            MySqlCommand command = new MySqlCommand("SELECT * FROM `users` WHERE `login` = @uL", db.getConnection()); ;
+
+            command.Parameters.Add("@uL", MySqlDbType.VarChar).Value = Login.Text;
+
+            adapter.SelectCommand = command;
+            adapter.Fill(table);
+
+            if (table.Rows.Count > 0)
+            {
+                MessageBox.Show("Такой логин уже есть, введите другой");
+                return true;
+            }
+
+            else
+            {
+                return false;
+            }
+        }
+
+           
+
+        private void RegisterForm_MouseMove(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
             {
@@ -41,33 +71,13 @@ namespace WindowsFormsApp1
             }
         }
 
-        private void label1_MouseDown(object sender, MouseEventArgs e)
+        private void RegisterForm_MouseDown(object sender, MouseEventArgs e)
         {
             lastPoint = new Point(e.X, e.Y);
         }
 
-        private void panel1_MouseMove(object sender, MouseEventArgs e)
+        private void buttonRegister_Click_1(object sender, EventArgs e)
         {
-            if (e.Button == MouseButtons.Left)
-            {
-                this.Left += e.X - lastPoint.X;
-                this.Top += e.Y - lastPoint.Y;
-            }
-        }
-
-        private void panel1_MouseDown(object sender, MouseEventArgs e)
-        {
-            lastPoint = new Point(e.X, e.Y);
-        }
-
-
-
-        private void buttonRegister_Click(object sender, EventArgs e)
-        {
-
-
-
-
             if (Login.Text == "Введите логин")
             {
                 MessageBox.Show("Введите login");
@@ -100,7 +110,8 @@ namespace WindowsFormsApp1
 
             db.openConnection();
             LoginForm f1;
-            if (command.ExecuteNonQuery() == 1) {
+            if (command.ExecuteNonQuery() == 1)
+            {
                 MessageBox.Show("Acc create");
                 this.Hide();
                 f1 = new LoginForm();
@@ -112,36 +123,12 @@ namespace WindowsFormsApp1
             db.closeConnection();
         }
 
-        public Boolean isUserExists()
+        private void label2_Click(object sender, EventArgs e)
         {
-            DB db = new DB();
-
-            DataTable table = new DataTable();
-
-            MySqlDataAdapter adapter = new MySqlDataAdapter();
-
-            MySqlCommand command = new MySqlCommand("SELECT * FROM `users` WHERE `login` = @uL", db.getConnection()); ;
-
-            command.Parameters.Add("@uL", MySqlDbType.VarChar).Value = Login.Text;
-
-            adapter.SelectCommand = command;
-            adapter.Fill(table);
-
-            if (table.Rows.Count > 0)
-            {
-                MessageBox.Show("Такой логин уже есть, введите другой");
-                return true;
-            }
-
-            else
-            {
-                return false;
-            }
+            Application.Exit();
         }
 
-  
-
-        private void Login_Enter(object sender, EventArgs e)
+        private void Login_Enter_1(object sender, EventArgs e)
         {
             if (Login.Text == "Введите логин")
             {
@@ -150,7 +137,7 @@ namespace WindowsFormsApp1
             }
         }
 
-        private void Login_Leave(object sender, EventArgs e)
+        private void Login_Leave_1(object sender, EventArgs e)
         {
             if (Login.Text == "")
             {
@@ -159,7 +146,7 @@ namespace WindowsFormsApp1
             }
         }
 
-        private void textBox2_Enter(object sender, EventArgs e)
+        private void textBox2_Enter_1(object sender, EventArgs e)
         {
             if (textBox2.Text == "Введите пароль")
             {
@@ -168,7 +155,7 @@ namespace WindowsFormsApp1
             }
         }
 
-        private void textBox2_Leave(object sender, EventArgs e)
+        private void textBox2_Leave_1(object sender, EventArgs e)
         {
             if (textBox2.Text == "")
             {
@@ -177,46 +164,16 @@ namespace WindowsFormsApp1
             }
         }
 
-        private void registerLabel_Click(object sender, EventArgs e)
+        private void textBox1_Enter_1(object sender, EventArgs e)
         {
-            this.Hide();
-            LoginForm loginForm = new LoginForm();
-            loginForm.Show();
-        }
-
-        private void userNameField_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Login_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            LoginForm loginForm = new LoginForm();
-            loginForm.Show();
-        }
-
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1_Enter(object sender, EventArgs e)
-        {
-            if (textBox1.Text == "Введите пароль")
+            if (textBox1.Text == "Повторите пароль")
             {
                 textBox1.Text = "";
+                this.textBox1.AutoSize = false;
+                this.textBox1.Size = new Size(this.textBox1.Width, Login.Height);
+                
                 textBox1.ForeColor = Color.Black;
+                
             }
         }
 
@@ -224,9 +181,18 @@ namespace WindowsFormsApp1
         {
             if (textBox1.Text == "")
             {
-                textBox1.Text = "Введите пароль";
+                textBox1.Text = "Повторите пароль";
                 textBox1.ForeColor = Color.Gray;
             }
         }
+
+        private void label1_Click_1(object sender, EventArgs e)
+        {
+            this.Hide();
+            LoginForm loginForm = new LoginForm();
+            loginForm.Show();
+        }
+
+     
     }
 }
