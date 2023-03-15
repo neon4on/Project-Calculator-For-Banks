@@ -197,7 +197,7 @@
             this.CloseButton.BackColor = System.Drawing.Color.White;
             this.CloseButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.CloseButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.CloseButton.ForeColor = System.Drawing.Color.Chocolate;
+            this.CloseButton.ForeColor = System.Drawing.Color.Black;
             this.CloseButton.Location = new System.Drawing.Point(1143, 9);
             this.CloseButton.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.CloseButton.Name = "CloseButton";
@@ -206,6 +206,8 @@
             this.CloseButton.Text = "X";
             this.CloseButton.TextAlign = System.Drawing.ContentAlignment.TopRight;
             this.CloseButton.Click += new System.EventHandler(this.CloseButton_Click);
+            this.CloseButton.MouseEnter += new System.EventHandler(this.CloseButton_MouseEnter);
+            this.CloseButton.MouseLeave += new System.EventHandler(this.CloseButton_MouseLeave);
             // 
             // imageList1
             // 

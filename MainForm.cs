@@ -81,5 +81,15 @@ namespace WindowsFormsApp1
         {
             lastPoint = new Point(e.X, e.Y);
         }
+
+        private void CloseButton_MouseEnter(object sender, EventArgs e)
+        {
+            CloseButton.ForeColor = Color.Red;
+        }
+
+        private void CloseButton_MouseLeave(object sender, EventArgs e)
+        {
+            CloseButton.ForeColor = Color.Black;
+        }
     }
 }

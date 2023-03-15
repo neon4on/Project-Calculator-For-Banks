@@ -201,14 +201,15 @@ namespace WindowsFormsApp1
             loginForm.Show();
         }
 
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
 
+        private void label2_MouseEnter(object sender, EventArgs e)
+        {
+            label2.ForeColor = Color.Red;
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
+        private void label2_MouseLeave(object sender, EventArgs e)
         {
-
+            label2.ForeColor = Color.Black;
         }
     }
 }
