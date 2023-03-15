@@ -73,7 +73,6 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(312, 46);
             this.textBox1.TabIndex = 27;
-            
             this.textBox1.Enter += new System.EventHandler(this.textBox1_Enter_1);
             this.textBox1.Leave += new System.EventHandler(this.textBox1_Leave);
             // 
@@ -85,7 +84,6 @@
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(312, 46);
             this.textBox2.TabIndex = 28;
-            
             this.textBox2.Enter += new System.EventHandler(this.textBox2_Enter_1);
             this.textBox2.Leave += new System.EventHandler(this.textBox2_Leave_1);
             // 
@@ -98,6 +96,7 @@
             this.Login.Name = "Login";
             this.Login.Size = new System.Drawing.Size(312, 63);
             this.Login.TabIndex = 29;
+            this.Login.TextChanged += new System.EventHandler(this.Login_TextChanged);
             this.Login.Enter += new System.EventHandler(this.Login_Enter_1);
             this.Login.Leave += new System.EventHandler(this.Login_Leave_1);
             // 

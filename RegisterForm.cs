@@ -211,5 +211,10 @@ namespace WindowsFormsApp1
         {
             label2.ForeColor = Color.Black;
         }
+
+        private void Login_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
