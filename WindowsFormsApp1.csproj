@@ -75,18 +75,6 @@
     <Compile Include="Main3.Designer.cs">
       <DependentUpon>Main3.cs</DependentUpon>
     </Compile>
-    <Compile Include="Main3Deposit.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Main3Deposit.Designer.cs">
-      <DependentUpon>Main3Deposit.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Main3Withdraw.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Main3Withdraw.Designer.cs">
-      <DependentUpon>Main3Withdraw.cs</DependentUpon>
-    </Compile>
     <Compile Include="Main4.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -118,12 +106,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Main3.resx">
       <DependentUpon>Main3.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Main3Deposit.resx">
-      <DependentUpon>Main3Deposit.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Main3Withdraw.resx">
-      <DependentUpon>Main3Withdraw.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Main4.resx">
       <DependentUpon>Main4.cs</DependentUpon>

@@ -57,7 +57,7 @@
             this.panel1.MaximumSize = new System.Drawing.Size(600, 601);
             this.panel1.MinimumSize = new System.Drawing.Size(800, 400);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(800, 591);
+            this.panel1.Size = new System.Drawing.Size(800, 598);
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
@@ -172,7 +172,7 @@
             this.CloseButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.CloseButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.CloseButton.ForeColor = System.Drawing.SystemColors.ButtonShadow;
-            this.CloseButton.Location = new System.Drawing.Point(749, 11);
+            this.CloseButton.Location = new System.Drawing.Point(764, 9);
             this.CloseButton.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.CloseButton.Name = "CloseButton";
             this.CloseButton.Size = new System.Drawing.Size(32, 31);
@@ -204,7 +204,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(795, 591);
+            this.ClientSize = new System.Drawing.Size(800, 598);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);

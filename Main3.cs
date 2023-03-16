@@ -20,6 +20,21 @@ namespace WindowsFormsApp1
         public Main3()
         {
             InitializeComponent();
+
+            DB db = new DB();
+            String labelBalance = "3";
+            db.openConnection();
+            MySqlCommand command = new MySqlCommand("SELECT `money3` FROM `users` WHERE `id` = @ID", db.getConnection());
+
+            command.Parameters.AddWithValue("@ID", MySqlDbType.VarChar).Value = labelBalance;
+            MySqlDataReader da = command.ExecuteReader();
+            while (da.Read())
+            {
+                label2.Text = da.GetValue(0).ToString();
+            }
+
+            da.Close();
+            db.closeConnection();
         }
         private void CloseButton_Click(object sender, EventArgs e)
         {
@@ -31,22 +46,7 @@ namespace WindowsFormsApp1
             MainForm MainForm = new MainForm();
             MainForm.Show();
         }
-        private void button5_Click(object sender, EventArgs e)
-        {
-            DB db = new DB();
-            String labelBalance = "3";
-            db.openConnection();
-            MySqlCommand command = new MySqlCommand("SELECT `money3` FROM `users` WHERE `id` = @ID", db.getConnection());
-            command.Parameters.AddWithValue("@ID", MySqlDbType.VarChar).Value = labelBalance;
-            MySqlDataReader da = command.ExecuteReader();
-            while (da.Read())
-            {
-                label2.Text = da.GetValue(0).ToString();
-            }
-            button5.Visible = false;
-            da.Close();
-            db.closeConnection();
-        }
+
         private void button2_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -65,7 +65,7 @@ namespace WindowsFormsApp1
             if (Convert.ToInt32(textBox1.Text) > 0)
             {
                 DB db = new DB();
-                MySqlCommand command = new MySqlCommand("UPDATE `users` SET `money3` = `money3` + @money3", db.getConnection());
+                MySqlCommand command = new MySqlCommand("UPDATE `users`  SET `money3` = `money3` + @money3 ", db.getConnection());
 
                 command.Parameters.Add("@money3", MySqlDbType.VarChar).Value = textBox1.Text;
 
@@ -160,6 +160,51 @@ namespace WindowsFormsApp1
                 MessageBox.Show("Введите положительное число");
             }
         }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CloseButton_MouseEnter(object sender, EventArgs e)
+        {
+            CloseButton.ForeColor = Color.Red;
+        }
+
+        private void CloseButton_MouseLeave(object sender, EventArgs e)
+        {
+            CloseButton.ForeColor = Color.White;
+        }
+        Point lastPoint;
+        private void Main3_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                this.Left += e.X - lastPoint.X;
+                this.Top += e.Y - lastPoint.Y;
+            }
+        }
+
+        private void Main3_MouseDown(object sender, MouseEventArgs e)
+        {
+            lastPoint = new Point(e.X, e.Y);
+        }
+
+        private void panel1_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                this.Left += e.X - lastPoint.X;
+                this.Top += e.Y - lastPoint.Y;
+            }
+        }
+
+        private void panel1_MouseDown(object sender, MouseEventArgs e)
+        {
+            lastPoint = new Point(e.X, e.Y);
+        }
+
+
 
 
         //    DB db = new DB();

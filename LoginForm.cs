@@ -34,7 +34,7 @@ namespace WindowsFormsApp1
 
         private void CloseButton_MouseLeave(object sender, EventArgs e)
         {
-            CloseButton.ForeColor = Color.Chocolate;
+            CloseButton.ForeColor = Color.Gray;
         }
 
         Point lastPoint;

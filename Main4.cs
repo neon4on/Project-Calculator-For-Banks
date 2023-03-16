@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -16,7 +17,18 @@ namespace WindowsFormsApp1
         public Main4()
         {
             InitializeComponent();
-
+            DB db = new DB();
+            String labelBalance = "3";
+            db.openConnection();
+            MySqlCommand command = new MySqlCommand("SELECT `money3` FROM `users` WHERE `id` = @ID", db.getConnection());
+            command.Parameters.AddWithValue("@ID", MySqlDbType.VarChar).Value = labelBalance;
+            MySqlDataReader da = command.ExecuteReader();
+            while (da.Read())
+            {
+                textBox1.Text = da.GetValue(0).ToString();
+            }
+            da.Close();
+            db.closeConnection();
         }
 
         private void label3_Click(object sender, EventArgs e)
@@ -93,7 +105,7 @@ namespace WindowsFormsApp1
 
         private void label7_MouseLeave(object sender, EventArgs e)
         {
-            label7.ForeColor = Color.Black;
+            label7.ForeColor = Color.White;
         }
         Point lastPoint;
         private void Main4_MouseMove(object sender, MouseEventArgs e)
@@ -108,6 +120,23 @@ namespace WindowsFormsApp1
         private void Main4_MouseDown(object sender, MouseEventArgs e)
         {
             lastPoint = new Point(e.X, e.Y);
+        }
+
+
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void textBox1_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

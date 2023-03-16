@@ -91,5 +91,15 @@ namespace WindowsFormsApp1
         {
             CloseButton.ForeColor = Color.Black;
         }
+
+        private void CloseButton_MouseEnter_1(object sender, EventArgs e)
+        {
+            CloseButton.ForeColor = Color.Red;
+        }
+
+        private void CloseButton_MouseLeave_1(object sender, EventArgs e)
+        {
+            CloseButton.ForeColor = Color.Gray;
+        }
     }
 }
