@@ -71,6 +71,8 @@ namespace WindowsFormsApp1
             String loginUser = Login.Text;
             String passUser = Password.Text;
 
+            ID.A = loginUser;
+
             DB db = new DB();
 
             DataTable table = new DataTable();

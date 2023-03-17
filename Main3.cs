@@ -22,11 +22,12 @@ namespace WindowsFormsApp1
             InitializeComponent();
 
             DB db = new DB();
-            String labelBalance = "3";
-            db.openConnection();
-            MySqlCommand command = new MySqlCommand("SELECT `money3` FROM `users` WHERE `id` = @ID", db.getConnection());
 
-            command.Parameters.AddWithValue("@ID", MySqlDbType.VarChar).Value = labelBalance;
+            db.openConnection();
+
+            MySqlCommand command = new MySqlCommand("SELECT `money3` FROM `users` WHERE `login` = @ID", db.getConnection());
+
+            command.Parameters.AddWithValue("@ID", ID.A);
             MySqlDataReader da = command.ExecuteReader();
             while (da.Read())
             {
@@ -64,10 +65,13 @@ namespace WindowsFormsApp1
 
             if (Convert.ToInt32(textBox1.Text) > 0)
             {
-                DB db = new DB();
-                MySqlCommand command = new MySqlCommand("UPDATE `users`  SET `money3` = `money3` + @money3 ", db.getConnection());
 
-                command.Parameters.Add("@money3", MySqlDbType.VarChar).Value = textBox1.Text;
+                DB db = new DB();
+                MySqlCommand command = new MySqlCommand("UPDATE `users`  SET `money3` = `money3` + @money3 WHERE `login` = @ID", db.getConnection());
+
+                command.Parameters.AddWithValue("@money3", textBox1.Text);
+
+                command.Parameters.AddWithValue("@ID", ID.A);
 
                 db.openConnection();
 
@@ -75,26 +79,24 @@ namespace WindowsFormsApp1
 
                 if (command.ExecuteNonQuery() == 1)
                 {
-                    MessageBox.Show("Невозможно пополнить");
+                    MessageBox.Show("Сумма внесена");
                     this.Hide();
                     f1 = new Main3();
                     f1.Show();
                 }
                 else
                 {
-                    MessageBox.Show("Сумма внесена");
+                    MessageBox.Show("Невозможно пополнить");
                 }
                 db.closeConnection();
-
-                String labelBalance = "3";
 
                 db = new DB();
 
                 db.openConnection();
 
-                command = new MySqlCommand("SELECT `money3` FROM `users` WHERE `id` = @ID", db.getConnection());
+                command = new MySqlCommand("SELECT `money3` FROM `users` WHERE `login` = @ID", db.getConnection());
 
-                command.Parameters.AddWithValue("@ID", MySqlDbType.VarChar).Value = labelBalance;
+                command.Parameters.AddWithValue("@ID", ID.A);
 
                 MySqlDataReader da = command.ExecuteReader();
 
@@ -115,36 +117,35 @@ namespace WindowsFormsApp1
         {
             if (Convert.ToInt32(textBox2.Text) > 0)
             {
+
                 DB db = new DB();
-                MySqlCommand command = new MySqlCommand("UPDATE `users` SET `money3` = `money3` - @money3", db.getConnection());
+                MySqlCommand command = new MySqlCommand("UPDATE `users` SET `money3` = `money3` - @money3 WHERE `login` = @ID", db.getConnection());
 
-                command.Parameters.Add("@money3", MySqlDbType.VarChar).Value = textBox2.Text;
-
+                command.Parameters.AddWithValue("@money3", textBox2.Text);
+                command.Parameters.AddWithValue("@ID", ID.A);
                 db.openConnection();
 
                 Main3 f1;
 
                 if (command.ExecuteNonQuery() == 1)
                 {
-                    MessageBox.Show("Невозможно вывести");
+                    MessageBox.Show("Сумма выведена");
                     this.Hide();
                     f1 = new Main3();
                     f1.Show();
                 }
                 else
-                    MessageBox.Show("Сумма выведена");
+                    MessageBox.Show("Невозможно вывести");
 
                 db.closeConnection();
-
-                String labelBalance = "3";
 
                 db = new DB();
 
                 db.openConnection();
 
-                command = new MySqlCommand("SELECT `money3` FROM `users` WHERE `id` = @ID", db.getConnection());
+                command = new MySqlCommand("SELECT `money3` FROM `users` WHERE `login` = @ID", db.getConnection());
 
-                command.Parameters.AddWithValue("@ID", MySqlDbType.VarChar).Value = labelBalance;
+                command.Parameters.AddWithValue("@ID", ID.A);
 
                 MySqlDataReader da = command.ExecuteReader();
 
