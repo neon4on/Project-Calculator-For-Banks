@@ -125,26 +125,44 @@ namespace WindowsFormsApp1
             lastPoint = new Point(e.X, e.Y);
         }
 
-
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
+        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
         {
-            
+            if ((e.KeyChar <= 47 || e.KeyChar >= 58) && e.KeyChar != 8)
+            {
+                e.Handled = true;
+            }
         }
 
-        private void textBox1_Click(object sender, EventArgs e)
+        private void textBox2_KeyPress(object sender, KeyPressEventArgs e)
         {
-            
+            if ((e.KeyChar <= 47 || e.KeyChar >= 58) && e.KeyChar != 8)
+            {
+                e.Handled = true;
+            }
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
+        private void textBox3_KeyPress(object sender, KeyPressEventArgs e)
         {
-
+            if ((e.KeyChar <= 47 || e.KeyChar >= 58) && e.KeyChar != 8)
+            {
+                e.Handled = true;
+            }
         }
 
-        private void textBox1_TextChanged_1(object sender, EventArgs e)
+        private void textBox4_KeyPress(object sender, KeyPressEventArgs e)
         {
+            if ((e.KeyChar <= 47 || e.KeyChar >= 58) && e.KeyChar != 8)
+            {
+                e.Handled = true;
+            }
+        }
 
+        private void textBox5_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((e.KeyChar <= 47 || e.KeyChar >= 58) && e.KeyChar != 8)
+            {
+                e.Handled = true;
+            }
         }
     }
 }

@@ -112,7 +112,6 @@
             this.label2.Size = new System.Drawing.Size(27, 29);
             this.label2.TabIndex = 8;
             this.label2.Text = "0";
-
             // 
             // label4
             // 
@@ -145,6 +144,7 @@
             this.textBox1.Size = new System.Drawing.Size(233, 58);
             this.textBox1.TabIndex = 14;
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.textBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
             // 
             // textBox2
             // 
@@ -153,6 +153,7 @@
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(233, 58);
             this.textBox2.TabIndex = 15;
+            this.textBox2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox2_KeyPress);
             // 
             // button1
             // 
