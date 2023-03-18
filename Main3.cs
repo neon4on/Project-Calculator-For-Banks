@@ -62,99 +62,125 @@ namespace WindowsFormsApp1
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-
-            if (Convert.ToInt32(textBox1.Text) > 0)
+            if (Convert.ToString(textBox1.Text) != "")
             {
-
-                DB db = new DB();
-                MySqlCommand command = new MySqlCommand("UPDATE `users`  SET `money3` = `money3` + @money3 WHERE `login` = @ID", db.getConnection());
-
-                command.Parameters.AddWithValue("@money3", textBox1.Text);
-
-                command.Parameters.AddWithValue("@ID", ID.A);
-
-                db.openConnection();
-
-                Main3 f1;
-
-                if (command.ExecuteNonQuery() == 1)
+                if (Convert.ToInt32(textBox1.Text) > 0)
                 {
-                    MessageBox.Show("Сумма внесена");
-                    this.Hide();
-                    f1 = new Main3();
-                    f1.Show();
+
+                    DB db = new DB();
+                    MySqlCommand command = new MySqlCommand("UPDATE `users`  SET `money3` = `money3` + @money3 WHERE `login` = @ID", db.getConnection());
+
+                    command.Parameters.AddWithValue("@money3", textBox1.Text);
+
+                    command.Parameters.AddWithValue("@ID", ID.A);
+
+                    db.openConnection();
+
+
+
+                    if (command.ExecuteNonQuery() == 1)
+                    {
+                        MessageBox.Show("Сумма внесена");
+                        textBox1.Text = "";
+                    }
+                    else
+                    {
+                        MessageBox.Show("Невозможно пополнить");
+                    }
+                    db.closeConnection();
+
+                    db = new DB();
+
+                    db.openConnection();
+
+                    command = new MySqlCommand("SELECT `money3` FROM `users` WHERE `login` = @ID", db.getConnection());
+
+                    command.Parameters.AddWithValue("@ID", ID.A);
+
+                    MySqlDataReader da = command.ExecuteReader();
+
+                    while (da.Read())
+                    {
+                        label2.Text = da.GetValue(0).ToString();
+                    }
+                    da.Close();
+                    db.closeConnection();
                 }
                 else
                 {
-                    MessageBox.Show("Невозможно пополнить");
+                    MessageBox.Show("Введите положительное число");
                 }
-                db.closeConnection();
-
-                db = new DB();
-
-                db.openConnection();
-
-                command = new MySqlCommand("SELECT `money3` FROM `users` WHERE `login` = @ID", db.getConnection());
-
-                command.Parameters.AddWithValue("@ID", ID.A);
-
-                MySqlDataReader da = command.ExecuteReader();
-
-                while (da.Read())
-                {
-                    label2.Text = da.GetValue(0).ToString();
-                }
-                da.Close();
-                db.closeConnection();
             }
             else
             {
                 MessageBox.Show("Введите положительное число");
             }
+        
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            if (Convert.ToInt32(textBox2.Text) > 0)
+            if (Convert.ToString(textBox2.Text) != "")
             {
+                if (Convert.ToInt32(textBox2.Text) > 0)
 
-                DB db = new DB();
-                MySqlCommand command = new MySqlCommand("UPDATE `users` SET `money3` = `money3` - @money3 WHERE `login` = @ID", db.getConnection());
 
-                command.Parameters.AddWithValue("@money3", textBox2.Text);
-                command.Parameters.AddWithValue("@ID", ID.A);
-                db.openConnection();
-
-                Main3 f1;
-
-                if (command.ExecuteNonQuery() == 1)
                 {
-                    MessageBox.Show("Сумма выведена");
-                    this.Hide();
-                    f1 = new Main3();
-                    f1.Show();
+
+                    if (Convert.ToDouble(textBox2.Text) <= Convert.ToDouble(label2.Text))
+                    {
+
+
+                        DB db = new DB();
+                        MySqlCommand command = new MySqlCommand("UPDATE `users` SET `money3` = `money3` - @money3 WHERE `login` = @ID", db.getConnection());
+
+                        command.Parameters.AddWithValue("@money3", textBox2.Text);
+                        command.Parameters.AddWithValue("@ID", ID.A);
+                        db.openConnection();
+
+
+
+                        if (command.ExecuteNonQuery() == 1)
+                        {
+                            MessageBox.Show("Сумма выведена");
+                            textBox2.Text = "";
+                        }
+                        else
+                            MessageBox.Show("Невозможно вывести");
+
+                        db.closeConnection();
+
+                        db = new DB();
+
+                        db.openConnection();
+
+                        command = new MySqlCommand("SELECT `money3` FROM `users` WHERE `login` = @ID", db.getConnection());
+
+                        command.Parameters.AddWithValue("@ID", ID.A);
+
+                        MySqlDataReader da = command.ExecuteReader();
+
+                        while (da.Read())
+                        {
+                            label2.Text = da.GetValue(0).ToString();
+                        }
+                        da.Close();
+                        db.closeConnection();
+
+
+                    }
+                    else
+                    {
+                        MessageBox.Show("Недостаточно средств");
+                        return;
+                    }
                 }
                 else
-                    MessageBox.Show("Невозможно вывести");
-
-                db.closeConnection();
-
-                db = new DB();
-
-                db.openConnection();
-
-                command = new MySqlCommand("SELECT `money3` FROM `users` WHERE `login` = @ID", db.getConnection());
-
-                command.Parameters.AddWithValue("@ID", ID.A);
-
-                MySqlDataReader da = command.ExecuteReader();
-
-                while (da.Read())
                 {
-                    label2.Text = da.GetValue(0).ToString();
+                    MessageBox.Show("Введите положительное число");
+                    return;
+
                 }
-                da.Close();
-                db.closeConnection();
             }
             else
             {
@@ -162,10 +188,6 @@ namespace WindowsFormsApp1
             }
         }
 
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void CloseButton_MouseEnter(object sender, EventArgs e)
         {
@@ -204,21 +226,5 @@ namespace WindowsFormsApp1
         {
             lastPoint = new Point(e.X, e.Y);
         }
-
-
-
-
-        //    DB db = new DB();
-        //    MySqlDataAdapter adapter = new MySqlDataAdapter();
-        //    String labelBalance = "3";
-        //    db.openConnection();
-        //        MySqlCommand command = new MySqlCommand("SELECT `money3` FROM `users` WHERE `id` = @ID", db.getConnection());
-        //    command.Parameters.AddWithValue("@ID", MySqlDbType.VarChar).Value = labelBalance;
-        //        using (MySqlDataReader da = command.ExecuteReader())
-        //        while (da.Read())
-        //        {
-        //            label2.Text = da.GetValue(0).ToString();
-        //}
-        //db.closeConnection();
     }
 }

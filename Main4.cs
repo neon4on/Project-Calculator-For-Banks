@@ -18,15 +18,18 @@ namespace WindowsFormsApp1
         {
             InitializeComponent();
             DB db = new DB();
-            String labelBalance = "3";
+
             db.openConnection();
-            MySqlCommand command = new MySqlCommand("SELECT `money3` FROM `users` WHERE `id` = @ID", db.getConnection());
-            command.Parameters.AddWithValue("@ID", MySqlDbType.VarChar).Value = labelBalance;
+
+            MySqlCommand command = new MySqlCommand("SELECT `money3` FROM `users` WHERE `login` = @ID", db.getConnection());
+
+            command.Parameters.AddWithValue("@ID", ID.A);
             MySqlDataReader da = command.ExecuteReader();
             while (da.Read())
             {
                 textBox1.Text = da.GetValue(0).ToString();
             }
+
             da.Close();
             db.closeConnection();
         }
@@ -135,6 +138,11 @@ namespace WindowsFormsApp1
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged_1(object sender, EventArgs e)
         {
 
         }
