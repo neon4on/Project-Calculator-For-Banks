@@ -35,7 +35,6 @@ C:\Users\stydent\Desktop\Project-Calculator-For-Banks-main\bin\Debug\System.Buff
 C:\Users\stydent\Desktop\Project-Calculator-For-Banks-main\bin\Debug\K4os.Compression.LZ4.dll
 C:\Users\stydent\Desktop\Project-Calculator-For-Banks-main\bin\Debug\K4os.Hash.xxHash.dll
 C:\Users\stydent\Desktop\Project-Calculator-For-Banks-main\bin\Debug\MySql.Data.xml
-C:\Users\stydent\Desktop\Project-Calculator-For-Banks-main\obj\Debug\WindowsFormsApp1.csproj.AssemblyReference.cache
 C:\Users\stydent\Desktop\Project-Calculator-For-Banks-main\obj\Debug\WindowsFormsApp1.exe.config
 C:\Users\stydent\Desktop\Project-Calculator-For-Banks-main\obj\Debug\WindowsFormsApp1.LoginForm.resources
 C:\Users\stydent\Desktop\Project-Calculator-For-Banks-main\obj\Debug\WindowsFormsApp1.MainForm.resources
@@ -135,3 +134,10 @@ C:\Users\Artur\Desktop\Project-Calculator-For-Banks-main\obj\Debug\WindowsFormsA
 C:\Users\Artur\Desktop\Project-Calculator-For-Banks-main\obj\Debug\WindowsFormsApp1.Main3.resources
 C:\Users\Artur\Desktop\Project-Calculator-For-Banks-main\obj\Debug\WindowsFormsApp1.Main4.resources
 C:\Users\Rush\Desktop\Project-Calculator-For-Banks-main\obj\Debug\WindowsFormsApp1.Main4.resources
+C:\Users\stydent\Desktop\Project-Calculator-For-Banks-main\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\stydent\Desktop\Project-Calculator-For-Banks-main\obj\Debug\WindowsFormsApp1.csprojAssemblyReference.cache
+C:\Users\stydent\Desktop\Project-Calculator-For-Banks-main\obj\Debug\WindowsFormsApp1.Main1.resources
+C:\Users\stydent\Desktop\Project-Calculator-For-Banks-main\obj\Debug\WindowsFormsApp1.Main2.resources
+C:\Users\stydent\Desktop\Project-Calculator-For-Banks-main\obj\Debug\WindowsFormsApp1.Main3.resources
+C:\Users\stydent\Desktop\Project-Calculator-For-Banks-main\obj\Debug\WindowsFormsApp1.Main4.resources
+C:\Users\stydent\Desktop\Project-Calculator-For-Banks-main\obj\Debug\WindowsFormsApp1.Main5.resources

@@ -125,7 +125,8 @@ namespace WindowsFormsApp1
             lastPoint = new Point(e.X, e.Y);
         }
 
-        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
+
+        private void textBox1_KeyPress_1(object sender, KeyPressEventArgs e)
         {
             if ((e.KeyChar <= 47 || e.KeyChar >= 58) && e.KeyChar != 8)
             {
@@ -143,7 +144,7 @@ namespace WindowsFormsApp1
 
         private void textBox3_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if ((e.KeyChar <= 47 || e.KeyChar >= 58) && e.KeyChar != 8)
+            if ((e.KeyChar <= 47 || e.KeyChar >= 58) && e.KeyChar != 8 && e.KeyChar != 44)
             {
                 e.Handled = true;
             }

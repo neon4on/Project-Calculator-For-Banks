@@ -242,5 +242,12 @@ namespace WindowsFormsApp1
                 e.Handled = true;
             }
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Main5 a = new Main5();
+            a.Show();
+        }
     }
 }
