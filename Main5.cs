@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using MySql.Data.MySqlClient;
 namespace WindowsFormsApp1
 {
     public partial class Main5 : Form
@@ -15,6 +15,22 @@ namespace WindowsFormsApp1
         public Main5()
         {
             InitializeComponent();
+
+            DB db = new DB();
+
+            db.openConnection();
+
+            MySqlCommand command = new MySqlCommand("SELECT `money3` FROM `users` WHERE `login` = @ID", db.getConnection());
+
+            command.Parameters.AddWithValue("@ID", ID.A);
+            MySqlDataReader da = command.ExecuteReader();
+            while (da.Read())
+            {
+                textBox1.Text = da.GetValue(0).ToString();
+            }
+
+            da.Close();
+            db.closeConnection();
         }
 
         private void button2_Click(object sender, EventArgs e)
