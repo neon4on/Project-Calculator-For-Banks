@@ -141,3 +141,5 @@ C:\Users\stydent\Desktop\Project-Calculator-For-Banks-main\obj\Debug\WindowsForm
 C:\Users\stydent\Desktop\Project-Calculator-For-Banks-main\obj\Debug\WindowsFormsApp1.Main3.resources
 C:\Users\stydent\Desktop\Project-Calculator-For-Banks-main\obj\Debug\WindowsFormsApp1.Main4.resources
 C:\Users\stydent\Desktop\Project-Calculator-For-Banks-main\obj\Debug\WindowsFormsApp1.Main5.resources
+C:\Users\Artur\Desktop\Project-Calculator-For-Banks-main\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\Artur\Desktop\Project-Calculator-For-Banks-main\obj\Debug\WindowsFormsApp1.Main5.resources

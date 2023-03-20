@@ -173,5 +173,10 @@ namespace WindowsFormsApp1
                 e.Handled = true;
             }
         }
+
+        private void Main4_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

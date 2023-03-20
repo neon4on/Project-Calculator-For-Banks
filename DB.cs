@@ -10,7 +10,7 @@ namespace WindowsFormsApp1
 {
     internal class DB 
     {
-        MySqlConnection connection = new MySqlConnection("Server=195.2.74.151;Port=1337;Database=it;Uid=root");
+        MySqlConnection connection = new MySqlConnection("Server=195.2.74.151;Port=1337;Database=it;Uid=BankItem;Pwd=Kkkk1917");
 
         public void openConnection()
         {
