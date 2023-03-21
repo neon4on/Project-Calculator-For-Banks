@@ -89,9 +89,9 @@ namespace WindowsFormsApp1
 
             if (table.Rows.Count > 0)
             {
-                this.Hide();
                 MainForm mainForm = new MainForm();
                 mainForm.Show();
+                this.Hide();
             }
             else
             {

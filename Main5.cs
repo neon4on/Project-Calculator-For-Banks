@@ -51,6 +51,7 @@ namespace WindowsFormsApp1
             label12.Text = label7.Text;
             groupBox1.Visible = false;
             button2.Visible = true;
+            label15.Visible = true;
             label15.Text = "3";
             label19.Visible = false;
             
@@ -70,8 +71,8 @@ namespace WindowsFormsApp1
 
         private void label9_Click(object sender, EventArgs e)
         {
-            label12.Visible = true;
             label12.Text = label9.Text;
+            label12.Visible = true;
             groupBox1.Visible = false;
             button2.Visible = true;
             groupBox3.Visible = true;
@@ -80,16 +81,20 @@ namespace WindowsFormsApp1
 
         private void label10_Click(object sender, EventArgs e)
         {
-            label12.Visible = true;
+
             label12.Text = label10.Text;
+
             groupBox1.Visible = false;
             label19.Visible = false;
             button2.Visible = true;
             label15.Text = "12";
+            label15.Visible = true;
+            label12.Visible = true;
         }
 
         private void label11_Click(object sender, EventArgs e)
         {
+            label15.Visible = true;
             label12.Visible = true;
             label12.Text = label11.Text;
             groupBox1.Visible = false;
@@ -158,7 +163,6 @@ namespace WindowsFormsApp1
             groupBox2.Visible = false;
             label19.Visible = false;
             label15.Text = label14.Text;
-            groupBox2.Visible = false;
         }
 
         private void label16_Click(object sender, EventArgs e)
@@ -195,7 +199,6 @@ namespace WindowsFormsApp1
             label19.Visible = false;
             label15.Text = label13.Text;
             label19.Visible = false;
-            groupBox2.Visible = false;
         }
 
         private void label18_Click(object sender, EventArgs e)
@@ -205,11 +208,11 @@ namespace WindowsFormsApp1
             label19.Visible = false;
             label15.Text = label14.Text;
             label19.Visible = false;
-            groupBox2.Visible = false;
         }
 
         private void label23_Click(object sender, EventArgs e)
         {
+            label15.Visible = true;
             label15.Text = label23.Text;
             groupBox3.Visible = false;
             label19.Visible = false;
@@ -218,6 +221,7 @@ namespace WindowsFormsApp1
 
         private void label21_Click(object sender, EventArgs e)
         {
+            label15.Visible = true;
             label15.Text = label23.Text;
             groupBox3.Visible = false;
             label19.Visible = false;
@@ -226,6 +230,7 @@ namespace WindowsFormsApp1
 
         private void label22_Click(object sender, EventArgs e)
         {
+            label15.Visible=true;
             label15.Text = label22.Text;
             groupBox3.Visible = false;
             label19.Visible = false;
@@ -234,6 +239,7 @@ namespace WindowsFormsApp1
 
         private void label20_Click(object sender, EventArgs e)
         {
+            label15.Visible = true;
             label15.Text = label22.Text;
             groupBox3.Visible = false;
             label19.Visible = false;
@@ -250,10 +256,6 @@ namespace WindowsFormsApp1
             }
         }
 
-        private void Main5_MouseDown(object sender, MouseEventArgs e)
-        {
-            lastPoint = new Point(e.X, e.Y);
-        }
 
         private void label15_Click(object sender, EventArgs e)
         {
@@ -267,7 +269,23 @@ namespace WindowsFormsApp1
 
         private void label15_Click_1(object sender, EventArgs e)
         {
+            label15.Visible = true;
+            groupBox2.Visible = false;
+            label19.Visible = false;
+            label15.Text = label13.Text;
+        }
 
+        private void Main5_MouseDown_1(object sender, MouseEventArgs e)
+        {
+            lastPoint = new Point(e.X, e.Y);
+        }
+
+        Main3 f2;
+        private void label24_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            f2 = new Main3();
+            f2.Show();
         }
     }
 }

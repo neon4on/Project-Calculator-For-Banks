@@ -61,13 +61,13 @@
     <Compile Include="Main1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Main1.Designer.cs">
+    <Compile Include="Main1.designer.cs">
       <DependentUpon>Main1.cs</DependentUpon>
     </Compile>
     <Compile Include="Main2.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Main2.Designer.cs">
+    <Compile Include="Main2.designer.cs">
       <DependentUpon>Main2.cs</DependentUpon>
     </Compile>
     <Compile Include="Main3.cs">

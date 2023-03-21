@@ -40,7 +40,9 @@ namespace WindowsFormsApp1
 
         private void button2_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            Main2 mainForm = new Main2();
+            mainForm.Show();
         }
         LoginForm f2;
         private void button4_Click(object sender, EventArgs e)
@@ -100,6 +102,14 @@ namespace WindowsFormsApp1
         private void CloseButton_MouseLeave_1(object sender, EventArgs e)
         {
             CloseButton.ForeColor = Color.Gray;
+        }
+
+     
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Main1 mainForm = new Main1();
+            mainForm.Show();
         }
     }
 }
